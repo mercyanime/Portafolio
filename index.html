@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe Andre Villacres Guevara | Mercy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Fuente nueva: más profesional, fina y legible -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -21,15 +22,16 @@
                         estudiante: '#00B498',
                         hoja: '#FF9500',
                         vector: '#34C759',
-                        // PALETA DE COLORES EXACTA QUE ME DISTE
+                        // Paleta de colores exacta
                         color1: '#1C4A3C',
                         color2: '#85C254',
                         color3: '#E8F3C2',
                         color4: '#F8F8F5',
                     },
                     fontFamily: {
-                        cursiva: ['"Dancing Script"', 'cursive', 'sans-serif'],
-                        poppins: ['"Poppins"', 'sans-serif'],
+                        // Nueva letra: Quicksand (moderna, fina y profesional)
+                        profesional: ['"Quicksand"', 'sans-serif'],
+                        inter: ['"Inter"', 'sans-serif'],
                     },
                 }
             }
@@ -58,98 +60,74 @@
         }
     </style>
 </head>
-<body class="fondo-imagen text-texto min-h-screen font-sans p-6 relative overflow-hidden">
+<body class="fondo-imagen text-texto min-h-screen font-inter p-6 relative overflow-hidden">
 
-    <!-- 🔹 TU TARJETA DE PERFIL (ARRIBA IZQUIERDA, IGUAL) -->
+    <!-- 🔹 TU TARJETA DE PERFIL (ARRIBA IZQUIERDA, LETRA NUEVA Y FINA) -->
     <div class="efecto-vidrio rounded-2xl p-4 w-full max-w-md shadow-lg">
         <div class="flex items-center gap-3 mb-2">
             <div class="w-10 h-10 rounded-full overflow-hidden border border-borde">
                 <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
             </div>
             <div>
-                <h3 class="font-normal text-base">Joe Andre Villacres Guevara</h3>
+                <h3 class="font-light text-lg">Joe Andre Villacres Guevara</h3>
                 <p class="text-xs text-white/80 font-light">Comunicador Digital · Diseñador</p>
             </div>
         </div>
-        <p class="font-cursiva text-base font-normal leading-relaxed text-white/95">
+        <p class="font-profesional font-light text-base leading-relaxed text-white/95">
             Soy comunicador digital con experiencia en Adobe Illustrador e inteligencia artificial, hago trabajos estudiantiles, hojas de vida, páginas web y publicidad. Me adapto a cualquier tipo de trabajo como vectorizar logotipos, diseños y alguna otra especialidad.
         </p>
     </div>
 
 
-    <!-- 🔹 BARRA LATERAL DERECHA (LETRA MÁS FINA, IGUAL LO DEMÁS) -->
+    <!-- 🔹 BARRA LATERAL DERECHA (TODO IGUAL, LETRA FINA) -->
     <div class="absolute top-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
         <div class="flex flex-col gap-3">
             
-            <!-- Adobe Illustrador -->
             <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-ilustra">
-                    <i class="fa-brands fa-adobe"></i>
-                </div>
+                <div class="icono-estilo bg-ilustra"><i class="fa-brands fa-adobe"></i></div>
                 <span class="text-xs font-light">Adobe Illustrador</span>
             </div>
-
-            <!-- Inteligencia Artificial -->
             <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-ai">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
+                <div class="icono-estilo bg-ai"><i class="fa-solid fa-brain"></i></div>
                 <span class="text-xs font-light">Inteligencia Artificial</span>
             </div>
-
-            <!-- Trabajos estudiantiles -->
             <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-estudiante">
-                    <i class="fa-solid fa-book"></i>
-                </div>
+                <div class="icono-estilo bg-estudiante"><i class="fa-solid fa-book"></i></div>
                 <span class="text-xs font-light">Trabajos estudiantiles</span>
             </div>
-
-            <!-- Hojas de vida -->
             <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-hoja">
-                    <i class="fa-solid fa-file-alt"></i>
-                </div>
+                <div class="icono-estilo bg-hoja"><i class="fa-solid fa-file-alt"></i></div>
                 <span class="text-xs font-light">Hojas de vida</span>
             </div>
-
-            <!-- Páginas web -->
             <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-web">
-                    <i class="fa-solid fa-globe"></i>
-                </div>
+                <div class="icono-estilo bg-web"><i class="fa-solid fa-globe"></i></div>
                 <span class="text-xs font-light">Páginas web</span>
             </div>
-
-            <!-- Vectorización -->
             <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-vector">
-                    <i class="fa-solid fa-vector-square"></i>
-                </div>
+                <div class="icono-estilo bg-vector"><i class="fa-solid fa-vector-square"></i></div>
                 <span class="text-xs font-light">Vectorización</span>
             </div>
-
         </div>
     </div>
 
 
-    <!-- 🔹 TARJETA GRANDE DE PASATIEMPOS (LETRA FINA, TEXTO EXACTO, ESPACIO IMAGEN) -->
+    <!-- 🔹 TARJETA DE PASATIEMPOS: IMAGEN 3.png + LETRA NUEVA MUCHO MÁS FINA -->
     <div class="absolute top-1/2 left-10 -translate-y-1/2 efecto-vidrio rounded-2xl p-6 w-full max-w-lg shadow-lg z-10">
-        <h3 class="text-center text-lg font-normal mb-4">Pasatiempos</h3>
+        <h3 class="text-center text-lg font-light mb-4">Pasatiempos</h3>
         
-        <!-- Espacio para imagen -->
-        <div class="w-full h-40 bg-white/10 rounded-xl mb-4 flex items-center justify-center border border-borde">
-            <span class="text-white/60 text-xs font-light">Aquí va tu imagen</span>
+        <!-- ✅ IMAGEN 3.png YA COLOCADA AQUÍ -->
+        <div class="w-full h-40 rounded-xl mb-4 overflow-hidden border border-borde">
+            <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
         </div>
 
-        <!-- Texto exacto, letra fina -->
-        <p class="font-cursiva text-lg font-normal leading-relaxed text-white text-center">
+        <!-- ✅ LETRA NUEVA: PROFESIONAL, FINA Y MUY LEGIBLE -->
+        <p class="font-profesional font-light text-base leading-relaxed text-white text-center">
             Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
         </p>
     </div>
 
 
-    <!-- 🔹 PALETA DE COLORES: CORRECTA + EN ESQUINA INFERIOR DERECHA -->
+    <!-- 🔹 PALETA DE COLORES: ABAJO DERECHA, COLORES EXACTOS -->
     <div class="absolute bottom-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
         <p class="text-center text-xs mb-2 font-light">Paleta de colores usada</p>
         <div class="flex gap-0 rounded-lg overflow-hidden">
@@ -161,7 +139,7 @@
     </div>
 
 
-    <!-- 🔹 CUADROS DE COLORES: 250px x 250px, SEPARADOS, PEGADOS A ABAJO (IGUAL) -->
+    <!-- 🔹 CUADROS DE COLORES: 250px, SEPARADOS, PEGADOS ABAJO -->
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-6 pb-0">
         <div class="w-[250px] h-[250px] bg-ilustra rounded-t-2xl sombra-tarjeta"></div>
         <div class="w-[250px] h-[250px] bg-ai rounded-t-2xl sombra-tarjeta"></div>
