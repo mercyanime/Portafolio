@@ -15,12 +15,12 @@
                         cristal: 'rgba(255, 255, 255, 0.12)',
                         borde: 'rgba(255, 255, 255, 0.25)',
                         texto: '#ffffff',
+                        ilustra: '#007AFF',
                         ai: '#5B42D3',
+                        web: '#E91E63',
                         estudiante: '#00B498',
                         hoja: '#FF9500',
-                        web: '#E91E63',
                         vector: '#34C759',
-                        ilustra: '#007AFF',
                     },
                     fontFamily: {
                         cursiva: ['"Dancing Script"', 'cursive', 'sans-serif'],
@@ -48,95 +48,93 @@
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             }
             .icono-estilo {
-                @apply w-10 h-10 rounded-xl flex items-center justify-center text-white text-base;
+                @apply w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm;
             }
         }
     </style>
 </head>
-<body class="fondo-imagen text-texto min-h-screen font-sans p-6 relative">
+<body class="fondo-imagen text-texto min-h-screen font-sans p-6 relative overflow-hidden">
 
-    <!-- 🔹 TU TARJETA DE PERFIL (ARRIBA IZQUIERDA, IGUAL QUE SIEMPRE) -->
-    <div class="efecto-vidrio rounded-2xl p-6 w-full max-w-md shadow-lg mb-16">
-        <div class="flex items-center gap-4 mb-3">
-            <div class="w-12 h-12 rounded-full overflow-hidden border border-borde">
+    <!-- 🔹 TU TARJETA DE PERFIL (ARRIBA IZQUIERDA, IGUAL) -->
+    <div class="efecto-vidrio rounded-2xl p-4 w-full max-w-md shadow-lg">
+        <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-borde">
                 <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
             </div>
             <div>
-                <h3 class="font-semibold text-lg">Joe Andre Villacres Guevara</h3>
-                <p class="text-sm text-white/90">Comunicador Digital · Diseñador</p>
+                <h3 class="font-semibold text-base">Joe Andre Villacres Guevara</h3>
+                <p class="text-xs text-white/80">Comunicador Digital · Diseñador</p>
             </div>
         </div>
-        <p class="font-cursiva text-lg font-normal leading-relaxed text-white">
+        <p class="font-cursiva text-base font-normal leading-relaxed text-white/95">
             Soy comunicador digital con experiencia en Adobe Illustrador e inteligencia artificial, hago trabajos estudiantiles, hojas de vida, páginas web y publicidad. Me adapto a cualquier tipo de trabajo como vectorizar logotipos, diseños y alguna otra especialidad.
         </p>
     </div>
 
 
-    <!-- 🔹 BARRA VERTICAL DERECHA - EFECTO VIDRIO, ICONOS + TEXTO -->
+    <!-- 🔹 BARRA LATERAL DERECHA (EFECTO VIDRIO, ICONOS + TEXTO) -->
     <div class="absolute top-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-3">
             
             <!-- Adobe Illustrador -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-ilustra">
                     <i class="fa-brands fa-adobe"></i>
                 </div>
-                <span class="text-xs font-light">Adobe Illustrador</span>
+                <span class="text-xs">Adobe Illustrador</span>
             </div>
 
             <!-- Inteligencia Artificial -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-ai">
                     <i class="fa-solid fa-brain"></i>
                 </div>
-                <span class="text-xs font-light">Inteligencia Artificial</span>
+                <span class="text-xs">Inteligencia Artificial</span>
             </div>
 
             <!-- Trabajos estudiantiles -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-estudiante">
                     <i class="fa-solid fa-book"></i>
                 </div>
-                <span class="text-xs font-light">Trabajos estudiantiles</span>
+                <span class="text-xs">Trabajos estudiantiles</span>
             </div>
 
             <!-- Hojas de vida -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-hoja">
                     <i class="fa-solid fa-file-alt"></i>
                 </div>
-                <span class="text-xs font-light">Hojas de vida</span>
+                <span class="text-xs">Hojas de vida</span>
             </div>
 
             <!-- Páginas web -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-web">
                     <i class="fa-solid fa-globe"></i>
                 </div>
-                <span class="text-xs font-light">Páginas web</span>
+                <span class="text-xs">Páginas web</span>
             </div>
 
             <!-- Vectorización -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-vector">
                     <i class="fa-solid fa-vector-square"></i>
                 </div>
-                <span class="text-xs font-light">Vectorización</span>
+                <span class="text-xs">Vectorización</span>
             </div>
 
         </div>
     </div>
 
 
-    <!-- 🔹 CUADROS DE COLORES (AL FINAL, TAMAÑOS DIFERENTES COMO EN LA IMAGEN) -->
-    <div class="w-full max-w-5xl mx-auto mt-20">
-        <div class="flex flex-wrap justify-center gap-4 md:gap-6 items-end">
-            <div class="w-[120px] h-[180px] bg-ilustra rounded-t-2xl sombra-tarjeta"></div>
-            <div class="w-[120px] h-[200px] bg-ai rounded-t-2xl sombra-tarjeta"></div>
-            <div class="w-[120px] h-[220px] bg-web rounded-t-2xl sombra-tarjeta"></div>
-            <div class="w-[120px] h-[200px] bg-estudiante rounded-t-2xl sombra-tarjeta"></div>
-            <div class="w-[120px] h-[180px] bg-hoja rounded-t-2xl sombra-tarjeta"></div>
-        </div>
+    <!-- 🔹 CUADROS DE COLORES: TOTALMENTE PEGADOS AL BORDE INFERIOR -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-0">
+        <div class="w-24 h-48 bg-ilustra rounded-t-xl"></div>
+        <div class="w-24 h-48 bg-ai rounded-t-xl"></div>
+        <div class="w-24 h-48 bg-web rounded-t-xl"></div>
+        <div class="w-24 h-48 bg-estudiante rounded-t-xl"></div>
+        <div class="w-24 h-48 bg-hoja rounded-t-xl"></div>
     </div>
 
 </body>
