@@ -15,17 +15,12 @@
                         cristal: 'rgba(255, 255, 255, 0.12)',
                         borde: 'rgba(255, 255, 255, 0.25)',
                         texto: '#ffffff',
-                        tarjeta1: '#5B42D3',
-                        tarjeta2: '#E52521',
-                        tarjeta3: '#009EDC',
-                        tarjeta4: '#30B877',
-                        tarjeta5: '#FBC200',
-                        icono1: '#3478F6',
-                        icono2: '#9C27B0',
-                        icono3: '#009688',
-                        icono4: '#FF9800',
-                        icono5: '#E91E63',
-                        icono6: '#4CAF50',
+                        ai: '#5B42D3',
+                        estudiante: '#00B498',
+                        hoja: '#FF9500',
+                        web: '#E91E63',
+                        vector: '#34C759',
+                        ilustra: '#007AFF',
                     },
                     fontFamily: {
                         cursiva: ['"Dancing Script"', 'cursive', 'sans-serif'],
@@ -53,7 +48,7 @@
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             }
             .icono-estilo {
-                @apply w-12 h-12 rounded-2xl flex items-center justify-center text-white text-lg;
+                @apply w-10 h-10 rounded-xl flex items-center justify-center text-white text-base;
             }
         }
     </style>
@@ -77,57 +72,70 @@
     </div>
 
 
-    <!-- 🔹 ICONOS VERTICALES EN ESQUINA SUPERIOR DERECHA -->
-    <div class="absolute top-6 right-6 flex flex-col gap-3 z-20">
-        <div class="icono-estilo bg-icono1"><i class="fa-brands fa-adobe"></i></div>
-        <div class="icono-estilo bg-icono2"><i class="fa-solid fa-brain"></i></div>
-        <div class="icono-estilo bg-icono3"><i class="fa-solid fa-book"></i></div>
-        <div class="icono-estilo bg-icono4"><i class="fa-solid fa-file-alt"></i></div>
-        <div class="icono-estilo bg-icono5"><i class="fa-solid fa-globe"></i></div>
-        <div class="icono-estilo bg-icono6"><i class="fa-solid fa-vector-square"></i></div>
-    </div>
+    <!-- 🔹 BARRA VERTICAL DERECHA - EFECTO VIDRIO, ICONOS + TEXTO -->
+    <div class="absolute top-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
+        <div class="flex flex-col gap-4">
+            
+            <!-- Adobe Illustrador -->
+            <div class="flex items-center gap-3">
+                <div class="icono-estilo bg-ilustra">
+                    <i class="fa-brands fa-adobe"></i>
+                </div>
+                <span class="text-xs font-light">Adobe Illustrador</span>
+            </div>
 
+            <!-- Inteligencia Artificial -->
+            <div class="flex items-center gap-3">
+                <div class="icono-estilo bg-ai">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="text-xs font-light">Inteligencia Artificial</span>
+            </div>
 
-    <!-- 🔹 NUEVA TARJETA DE SERVICIOS (ARRIBA DE LOS CUADROS) -->
-    <div class="efecto-vidrio rounded-2xl p-6 w-full max-w-lg mx-auto shadow-lg mb-20">
-        <h3 class="text-center text-lg font-semibold mb-5">Mis Servicios y Herramientas</h3>
-        <div class="grid grid-cols-3 gap-4 text-center">
-            <div class="flex flex-col items-center gap-2">
-                <div class="icono-estilo bg-icono1"><i class="fa-brands fa-adobe"></i></div>
-                <span class="text-xs">Adobe Illustrador</span>
+            <!-- Trabajos estudiantiles -->
+            <div class="flex items-center gap-3">
+                <div class="icono-estilo bg-estudiante">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <span class="text-xs font-light">Trabajos estudiantiles</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div class="icono-estilo bg-icono2"><i class="fa-solid fa-brain"></i></div>
-                <span class="text-xs">Inteligencia Artificial</span>
+
+            <!-- Hojas de vida -->
+            <div class="flex items-center gap-3">
+                <div class="icono-estilo bg-hoja">
+                    <i class="fa-solid fa-file-alt"></i>
+                </div>
+                <span class="text-xs font-light">Hojas de vida</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div class="icono-estilo bg-icono3"><i class="fa-solid fa-book"></i></div>
-                <span class="text-xs">Trabajos estudiantiles</span>
+
+            <!-- Páginas web -->
+            <div class="flex items-center gap-3">
+                <div class="icono-estilo bg-web">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <span class="text-xs font-light">Páginas web</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div class="icono-estilo bg-icono4"><i class="fa-solid fa-file-alt"></i></div>
-                <span class="text-xs">Hojas de vida</span>
+
+            <!-- Vectorización -->
+            <div class="flex items-center gap-3">
+                <div class="icono-estilo bg-vector">
+                    <i class="fa-solid fa-vector-square"></i>
+                </div>
+                <span class="text-xs font-light">Vectorización</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div class="icono-estilo bg-icono5"><i class="fa-solid fa-globe"></i></div>
-                <span class="text-xs">Páginas web</span>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-                <div class="icono-estilo bg-icono6"><i class="fa-solid fa-vector-square"></i></div>
-                <span class="text-xs">Vectorización</span>
-            </div>
+
         </div>
     </div>
 
 
-    <!-- 🔹 CUADROS DE COLORES (AHORA AL FINAL DE LA PÁGINA) -->
-    <div class="w-full max-w-6xl mx-auto font-poppins">
-        <div class="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 items-end">
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta1 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta2 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[280px] bg-tarjeta3 rounded-2xl sombra-tarjeta relative overflow-hidden scale-105 z-10"></div>
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta4 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta5 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
+    <!-- 🔹 CUADROS DE COLORES (AL FINAL, TAMAÑOS DIFERENTES COMO EN LA IMAGEN) -->
+    <div class="w-full max-w-5xl mx-auto mt-20">
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6 items-end">
+            <div class="w-[120px] h-[180px] bg-ilustra rounded-t-2xl sombra-tarjeta"></div>
+            <div class="w-[120px] h-[200px] bg-ai rounded-t-2xl sombra-tarjeta"></div>
+            <div class="w-[120px] h-[220px] bg-web rounded-t-2xl sombra-tarjeta"></div>
+            <div class="w-[120px] h-[200px] bg-estudiante rounded-t-2xl sombra-tarjeta"></div>
+            <div class="w-[120px] h-[180px] bg-hoja rounded-t-2xl sombra-tarjeta"></div>
         </div>
     </div>
 
