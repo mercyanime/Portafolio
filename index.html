@@ -87,13 +87,6 @@
                 background-clip: text;
                 color: transparent;
             }
-            .icono-app {
-                background-image: url('apps.png');
-                background-size: 1920px 1080px; /* Tamaño exacto de tu archivo */
-                background-repeat: no-repeat;
-                width: 100px;
-                height: 100px;
-            }
         }
     </style>
 </head>
@@ -152,14 +145,14 @@
     </div>
 
 
-    <!-- 🔹 APPS QUE USO - CORREGIDO AL PÍXEL EXACTO -->
+    <!-- 🔹 EXPERIENCIA (ICONOS) - AHORA CON IMÁGENES SEPARADAS -->
     <div class="efecto-vidrio-azul p-4 w-[380px] z-30 absolute bottom-10 left-6">
-        <h3 class="text-center text-xs font-medium mb-4 text-cyan-300">Apps que uso</h3>
+        <h3 class="text-center text-xs font-medium mb-4 text-cyan-300">Experiencia</h3>
         <div class="grid grid-cols-4 gap-3 justify-items-center">
             
             <!-- Adobe Illustrator -->
             <div class="flex flex-col items-center">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 20px 20px;"></div>
+                <img src="ai.png" alt="Illustrator" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -168,7 +161,7 @@
 
             <!-- Inteligencia Artificial -->
             <div class="flex flex-col items-center">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 340px 20px;"></div>
+                <img src="ia.png" alt="Inteligencia Artificial" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
@@ -177,7 +170,7 @@
 
             <!-- CapCut -->
             <div class="flex flex-col items-center">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 660px 20px;"></div>
+                <img src="capcut.png" alt="CapCut" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
@@ -186,7 +179,7 @@
 
             <!-- OBS Studio -->
             <div class="flex flex-col items-center">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 1300px 20px;"></div>
+                <img src="obs.png" alt="OBS Studio" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -195,7 +188,7 @@
 
             <!-- Polarr -->
             <div class="flex flex-col items-center">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 20px 420px;"></div>
+                <img src="polarr.png" alt="Polarr" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -204,7 +197,7 @@
 
             <!-- Canva -->
             <div class="flex flex-col items-center">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 340px 420px;"></div>
+                <img src="canva.png" alt="Canva" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -213,7 +206,7 @@
 
             <!-- GitHub -->
             <div class="flex flex-col items-center col-span-2">
-                <div class="icono-app rounded-md border border-borde_vidrio mb-1" style="background-position: 660px 420px;"></div>
+                <img src="github.png" alt="GitHub" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
