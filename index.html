@@ -20,11 +20,12 @@
                         cuadro2: '#5B42D3',
                         cuadro3: '#E91E63',
                         cuadro4: '#00B498',
-                        // Paleta exacta
-                        color1: '#FF3333',
-                        color2: '#702963',
-                        color3: '#F9F871',
-                        color4: '#4B1E36',
+                        // ✅ PALETA DE COLORES INSTAGRAM
+                        ig_rosa: '#E1306C',
+                        ig_morado: '#C13584',
+                        ig_naranja: '#F56040',
+                        ig_amarillo: '#FFDC80',
+                        ig_rojo: '#FD1D1D',
                     },
                     fontFamily: {
                         profesional: ['"Quicksand"', 'sans-serif'],
@@ -54,13 +55,7 @@
                 -webkit-backdrop-filter: blur(10px);
                 border: 1px solid rgba(255, 255, 255, 0.2);
             }
-            .reproductor-musica {
-                background: rgba(255, 220, 220, 0.15);
-                backdrop-filter: blur(18px);
-                -webkit-backdrop-filter: blur(18px);
-                border: 1px solid rgba(255, 255, 255, 0.25);
-            }
-            /* ✅ ESTILO NUEVO: PERFIL VIDRIO NEÓN EXACTO A LA IMAGEN */
+            /* Estilo: Perfil vidrio neón exacto a la imagen */
             .perfil-neon {
                 background: rgba(255, 255, 255, 0.05);
                 backdrop-filter: blur(20px);
@@ -182,65 +177,6 @@
     </div>
 
 
-    <!-- 🔹 REPRODUCTOR DE MÚSICA (FUNCIONAL - PLAYLIST BABI) -->
-    <div class="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 reproductor-musica rounded-[2rem] p-6 w-[320px] shadow-xl z-40 text-center">
-        <audio id="reproductor" preload="metadata">
-        <div class="w-full h-44 rounded-2xl overflow-hidden mb-4 border border-white/25">
-            <img src="3.png" alt="Portada canción" class="w-full h-full object-cover">
-        </div>
-        <h4 id="titulo-cancion" class="font-light text-white text-sm mb-1">Sin título</h4>
-        <p id="artista-cancion" class="text-[10px] text-white/70 font-light mb-4">Babi</p>
-        <div class="w-full h-1 bg-white/20 rounded-full mb-4 relative">
-            <div id="barra-progreso" class="h-full bg-white rounded-full w-0 absolute left-0"></div>
-        </div>
-        <div class="flex justify-between items-center mb-5 px-4">
-            <i id="anterior" class="fa-solid fa-backward-step text-white/80 text-lg cursor-pointer"></i>
-            <i id="boton-play" class="fa-solid fa-circle-play text-white text-3xl cursor-pointer"></i>
-            <i id="siguiente" class="fa-solid fa-forward-step text-white/80 text-lg cursor-pointer"></i>
-        </div>
-        <h3 class="text-white text-xl font-light mb-2">Love</h3>
-        <p class="text-[11px] text-white/70 mb-4">Playlist · Babi</p>
-        <div id="lista-canciones" class="space-y-3 text-left">
-            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" data-titulo="Sin ti" data-duracion="3:49">
-                <img src="3.png" class="w-8 h-8 rounded object-cover">
-                <div class="flex-1"><p class="text-white text-xs">Sin ti</p><p class="text-white/60 text-[9px]">Babi</p></div>
-                <span class="text-white/60 text-[9px]">3:49</span>
-            </div>
-            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-titulo="Mariposas" data-duracion="3:15">
-                <img src="3.png" class="w-8 h-8 rounded object-cover">
-                <div class="flex-1"><p class="text-white text-xs">Mariposas</p><p class="text-white/60 text-[9px]">Babi</p></div>
-                <span class="text-white/60 text-[9px]">3:15</span>
-            </div>
-            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-titulo="Dime dónde" data-duracion="4:02">
-                <img src="3.png" class="w-8 h-8 rounded object-cover">
-                <div class="flex-1"><p class="text-white text-xs">Dime dónde</p><p class="text-white/60 text-[9px]">Babi</p></div>
-                <span class="text-white/60 text-[9px]">4:02</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Script música -->
-    <script>
-        const audio = document.getElementById('reproductor');
-        const botonPlay = document.getElementById('boton-play');
-        const barraProgreso = document.getElementById('barra-progreso');
-        const tituloCancion = document.getElementById('titulo-cancion');
-        const listaItems = document.querySelectorAll('.cancion-item');
-        const btnAnterior = document.getElementById('anterior');
-        const btnSiguiente = document.getElementById('siguiente');
-        let reproduciendo = false, cancionActual = 0, canciones = [];
-        listaItems.forEach((item,i)=>{canciones.push({src:item.dataset.src,titulo:item.dataset.titulo});item.addEventListener('click',()=>{cargar(i);reproducir()})});
-        function cargar(i){cancionActual=i;audio.src=canciones[i].src;tituloCancion.textContent=canciones[i].titulo;barraProgreso.style.width='0%'}
-        function reproducir(){audio.play();botonPlay.classList.remove('fa-circle-play');botonPlay.classList.add('fa-circle-pause');reproduciendo=true}
-        function pausar(){audio.pause();botonPlay.classList.remove('fa-circle-pause');botonPlay.classList.add('fa-circle-play');reproduciendo=false}
-        botonPlay.addEventListener('click',()=>{if(!audio.src)cargar(0);reproduciendo?pausar():reproducir()});
-        btnAnterior.addEventListener('click',()=>{let n=cancionActual-1;if(n<0)n=canciones.length-1;cargar(n);reproducir()});
-        btnSiguiente.addEventListener('click',()=>{let n=cancionActual+1;if(n>=canciones.length)n=0;cargar(n);reproducir()});
-        audio.addEventListener('timeupdate',()=>{if(audio.duration>0){const p=(audio.currentTime/audio.duration)*100;barraProgreso.style.width=p+'%'}});
-        audio.addEventListener('ended',()=>btnSiguiente.click());
-    </script>
-
-
     <!-- 🔹 TARJETA DE PASATIEMPOS -->
     <div class="absolute top-[65%] left-6 -translate-y-1/2 efecto-vidrio rounded-2xl p-5 w-full max-w-xs shadow-lg z-10">
         <h3 class="text-center text-base font-light mb-3">Pasatiempos</h3>
@@ -253,14 +189,39 @@
     </div>
 
 
-    <!-- 🔹 PALETA DE COLORES -->
+    <!-- 🔹 ✅ NUEVA TARJETA: EXPERIENCIA LABORAL -->
+    <div class="absolute top-[65%] right-6 -translate-y-1/2 efecto-vidrio rounded-2xl p-5 w-full max-w-xs shadow-lg z-10">
+        <h3 class="text-center text-base font-light mb-4 texto-neon">Experiencia</h3>
+        <ul class="space-y-3 text-white/90 text-sm">
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-briefcase text-ig_rosa mt-1"></i>
+                <span><strong>8 años</strong> en atención al cliente</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-building text-ig_morado mt-1"></i>
+                <span><strong>2 años</strong> en COOPERATIVA TOURIS SAN FRANCISCO</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-truck text-ig_naranja mt-1"></i>
+                <span><strong>1 año</strong> en AGEEPCOURIER ECUADOR S.A</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-gamepad text-ig_amarillo mt-1"></i>
+                <span><strong>6 MESES</strong> EN HOUSE GAMING CYBER</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 🔹 ✅ PALETA DE COLORES INSTAGRAM -->
     <div class="absolute bottom-6 right-6 efecto-vidrio rounded-2xl p-2 shadow-lg z-20">
-        <p class="text-center text-[9px] mb-1 font-light">Paleta de colores usada</p>
+        <p class="text-center text-[9px] mb-1 font-light">Paleta Instagram</p>
         <div class="flex gap-0 rounded-lg overflow-hidden">
-            <div class="w-12 h-8 bg-color1 flex flex-col items-center justify-center text-[8px] text-white font-mono">#FF3333</div>
-            <div class="w-12 h-8 bg-color2 flex flex-col items-center justify-center text-[8px] text-white font-mono">#702963</div>
-            <div class="w-12 h-8 bg-color3 flex flex-col items-center justify-center text-[8px] text-black font-mono">#F9F871</div>
-            <div class="w-12 h-8 bg-color4 flex flex-col items-center justify-center text-[8px] text-white font-mono">#4B1E36</div>
+            <div class="w-11 h-8 bg-ig_rosa flex flex-col items-center justify-center text-[8px] text-white font-mono">#E1306C</div>
+            <div class="w-11 h-8 bg-ig_morado flex flex-col items-center justify-center text-[8px] text-white font-mono">#C13584</div>
+            <div class="w-11 h-8 bg-ig_naranja flex flex-col items-center justify-center text-[8px] text-white font-mono">#F56040</div>
+            <div class="w-11 h-8 bg-ig_amarillo flex flex-col items-center justify-center text-[8px] text-black font-mono">#FFDC80</div>
+            <div class="w-11 h-8 bg-ig_rojo flex flex-col items-center justify-center text-[8px] text-white font-mono">#FD1D1D</div>
         </div>
     </div>
 
