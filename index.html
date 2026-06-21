@@ -13,16 +13,14 @@
                 extend: {
                     colors: {
                         cristal: 'rgba(255, 255, 255, 0.1)',
-                        cristal2: 'rgba(40, 40, 60, 0.25)',
                         borde: 'rgba(255, 255, 255, 0.2)',
                         texto: '#ffffff',
-                        ilustra: '#007AFF',
-                        ai: '#5B42D3',
-                        web: '#E91E63',
-                        estudiante: '#00B498',
-                        hoja: '#FF9500',
-                        vector: '#34C759',
-                        // Paleta exacta que me diste
+                        // Colores de los cuadros
+                        cuadro1: '#007AFF',
+                        cuadro2: '#5B42D3',
+                        cuadro3: '#E91E63',
+                        cuadro4: '#00B498',
+                        // Paleta exacta
                         color1: '#FF3333',
                         color2: '#702963',
                         color3: '#F9F871',
@@ -50,17 +48,20 @@
                 -webkit-backdrop-filter: blur(14px);
                 border: 1px solid rgba(255, 255, 255, 0.15);
             }
+            .cuadro-vidrio {
+                background: rgba(255, 255, 255, 0.12);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
             .reproductor-musica {
                 background: rgba(255, 220, 220, 0.15);
                 backdrop-filter: blur(18px);
                 -webkit-backdrop-filter: blur(18px);
-                border: 1px solid rgba(255, 255, 255, 0.2);
+                border: 1px solid rgba(255, 255, 255, 0.25);
             }
             .sombra-tarjeta {
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            }
-            .icono-estilo {
-                @apply w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm;
             }
         }
     </style>
@@ -84,123 +85,152 @@
     </div>
 
 
-    <!-- 🔹 ✅ WIDGET DE MÚSICA: AHORA SÍ APARECE, DISEÑO EXACTO Y FUNCIONAL -->
+    <!-- 🔹 ✅ WIDGET DE MÚSICA: DISEÑO IGUAL + PLAYLIST BABI + FUNCIONAL 100% -->
     <div class="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 reproductor-musica rounded-[2rem] p-6 w-[320px] shadow-xl z-50 text-center">
-        <!-- Audio funcional -->
-        <audio id="reproductor" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="metadata">
+        <!-- Audio -->
+        <audio id="reproductor" preload="metadata">
 
         <!-- Portada -->
         <div class="w-full h-44 rounded-2xl overflow-hidden mb-4 border border-white/25">
             <img src="3.png" alt="Portada canción" class="w-full h-full object-cover">
         </div>
 
-        <!-- Títulos -->
-        <h4 class="font-light text-white text-sm mb-1">TERTAWA SEDU</h4>
-        <p class="text-[10px] text-white/70 font-light mb-4">Ketut Susilo</p>
+        <!-- Títulos dinámicos -->
+        <h4 id="titulo-cancion" class="font-light text-white text-sm mb-1">Sin título</h4>
+        <p id="artista-cancion" class="text-[10px] text-white/70 font-light mb-4">Babi</p>
 
         <!-- Barra de progreso -->
         <div class="w-full h-1 bg-white/20 rounded-full mb-4 relative">
-            <div id="barra-progreso" class="h-full bg-white rounded-full w-1/4 absolute left-0"></div>
+            <div id="barra-progreso" class="h-full bg-white rounded-full w-0 absolute left-0"></div>
         </div>
 
         <!-- Controles -->
         <div class="flex justify-between items-center mb-5 px-4">
-            <i class="fa-solid fa-backward-step text-white/80 text-lg"></i>
+            <i id="anterior" class="fa-solid fa-backward-step text-white/80 text-lg cursor-pointer"></i>
             <i id="boton-play" class="fa-solid fa-circle-play text-white text-3xl cursor-pointer"></i>
-            <i class="fa-solid fa-forward-step text-white/80 text-lg"></i>
+            <i id="siguiente" class="fa-solid fa-forward-step text-white/80 text-lg cursor-pointer"></i>
         </div>
 
         <!-- Título lista -->
         <h3 class="text-white text-xl font-light mb-2">Love</h3>
-        <p class="text-[11px] text-white/70 mb-4">Lagu untuk yang sedang patah hati!!</p>
+        <p class="text-[11px] text-white/70 mb-4">Playlist · Babi</p>
 
-        <!-- Lista de canciones -->
-        <div class="space-y-3 text-left">
-            <div class="flex items-center gap-3">
+        <!-- ✅ LISTA DE CANCIONES DE BABI -->
+        <div id="lista-canciones" class="space-y-3 text-left">
+            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" data-titulo="Sin ti" data-duracion="3:49">
                 <img src="3.png" class="w-8 h-8 rounded object-cover">
                 <div class="flex-1">
-                    <p class="text-white text-xs">Borcelle</p>
-                    <p class="text-white/60 text-[9px]">Cahaya dewi</p>
+                    <p class="text-white text-xs">Sin ti</p>
+                    <p class="text-white/60 text-[9px]">Babi</p>
                 </div>
                 <span class="text-white/60 text-[9px]">3:49</span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-titulo="Mariposas" data-duracion="3:15">
                 <img src="3.png" class="w-8 h-8 rounded object-cover">
                 <div class="flex-1">
-                    <p class="text-white text-xs">Larana,inc.</p>
-                    <p class="text-white/60 text-[9px]">Ketut Susilo</p>
+                    <p class="text-white text-xs">Mariposas</p>
+                    <p class="text-white/60 text-[9px]">Babi</p>
                 </div>
-                <span class="text-white/60 text-[9px]">1:29</span>
+                <span class="text-white/60 text-[9px]">3:15</span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-titulo="Dime dónde" data-duracion="4:02">
                 <img src="3.png" class="w-8 h-8 rounded object-cover">
                 <div class="flex-1">
-                    <p class="text-white text-xs">Rimberio</p>
-                    <p class="text-white/60 text-[9px]"></p>
+                    <p class="text-white text-xs">Dime dónde</p>
+                    <p class="text-white/60 text-[9px]">Babi</p>
                 </div>
-                <span class="text-white/60 text-[9px]">5:10</span>
+                <span class="text-white/60 text-[9px]">4:02</span>
+            </div>
+            <div class="cancion-item flex items-center gap-3 p-1 rounded cursor-pointer hover:bg-white/10" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" data-titulo="Tu recuerdo" data-duracion="2:58">
+                <img src="3.png" class="w-8 h-8 rounded object-cover">
+                <div class="flex-1">
+                    <p class="text-white text-xs">Tu recuerdo</p>
+                    <p class="text-white/60 text-[9px]">Babi</p>
+                </div>
+                <span class="text-white/60 text-[9px]">2:58</span>
             </div>
         </div>
     </div>
 
-    <!-- Script para que funcione -->
+    <!-- ✅ SCRIPT COMPLETO PARA QUE TODO FUNCIONE -->
     <script>
         const audio = document.getElementById('reproductor');
         const botonPlay = document.getElementById('boton-play');
         const barraProgreso = document.getElementById('barra-progreso');
-        let reproduciendo = false;
+        const tituloCancion = document.getElementById('titulo-cancion');
+        const listaItems = document.querySelectorAll('.cancion-item');
+        const btnAnterior = document.getElementById('anterior');
+        const btnSiguiente = document.getElementById('siguiente');
 
-        botonPlay.addEventListener('click', () => {
-            if (!reproduciendo) {
-                audio.play();
-                botonPlay.classList.remove('fa-circle-play');
-                botonPlay.classList.add('fa-circle-pause');
-            } else {
-                audio.pause();
-                botonPlay.classList.remove('fa-circle-pause');
-                botonPlay.classList.add('fa-circle-play');
-            }
-            reproduciendo = !reproduciendo;
+        let reproduciendo = false;
+        let cancionActual = 0;
+        let canciones = [];
+
+        // Guardar lista de canciones
+        listaItems.forEach((item, i) => {
+            canciones.push({
+                src: item.dataset.src,
+                titulo: item.dataset.titulo
+            });
+            // Cargar canción al hacer clic
+            item.addEventListener('click', () => {
+                cargarCancion(i);
+                reproducir();
+            });
         });
 
+        // Cargar primera canción
+        function cargarCancion(indice) {
+            cancionActual = indice;
+            audio.src = canciones[indice].src;
+            tituloCancion.textContent = canciones[indice].titulo;
+            barraProgreso.style.width = '0%';
+        }
+
+        // Reproducir / Pausar
+        botonPlay.addEventListener('click', () => {
+            if (!audio.src) cargarCancion(0);
+            if (!reproduciendo) reproducir();
+            else pausar();
+        });
+
+        function reproducir() {
+            audio.play();
+            botonPlay.classList.remove('fa-circle-play');
+            botonPlay.classList.add('fa-circle-pause');
+            reproduciendo = true;
+        }
+        function pausar() {
+            audio.pause();
+            botonPlay.classList.remove('fa-circle-pause');
+            botonPlay.classList.add('fa-circle-play');
+            reproduciendo = false;
+        }
+
+        // Anterior / Siguiente
+        btnAnterior.addEventListener('click', () => {
+            let nueva = cancionActual - 1;
+            if (nueva < 0) nueva = canciones.length - 1;
+            cargarCancion(nueva);
+            reproducir();
+        });
+        btnSiguiente.addEventListener('click', () => {
+            let nueva = cancionActual + 1;
+            if (nueva >= canciones.length) nueva = 0;
+            cargarCancion(nueva);
+            reproducir();
+        });
+
+        // Barra de progreso
         audio.addEventListener('timeupdate', () => {
             if (audio.duration > 0) {
                 const porcentaje = (audio.currentTime / audio.duration) * 100;
                 barraProgreso.style.width = porcentaje + '%';
             }
         });
+        // Al terminar, pasa a la siguiente
+        audio.addEventListener('ended', () => btnSiguiente.click());
     </script>
-
-
-    <!-- 🔹 BARRA LATERAL DERECHA -->
-    <div class="absolute top-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
-        <div class="flex flex-col gap-3">
-            <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-ilustra"><i class="fa-brands fa-adobe"></i></div>
-                <span class="text-xs font-light">Adobe Illustrador</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-ai"><i class="fa-solid fa-brain"></i></div>
-                <span class="text-xs font-light">Inteligencia Artificial</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-estudiante"><i class="fa-solid fa-book"></i></div>
-                <span class="text-xs font-light">Trabajos estudiantiles</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-hoja"><i class="fa-solid fa-file-alt"></i></div>
-                <span class="text-xs font-light">Hojas de vida</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-web"><i class="fa-solid fa-globe"></i></div>
-                <span class="text-xs font-light">Páginas web</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <div class="icono-estilo bg-vector"><i class="fa-solid fa-vector-square"></i></div>
-                <span class="text-xs font-light">Vectorización</span>
-            </div>
-        </div>
-    </div>
 
 
     <!-- 🔹 TARJETA DE PASATIEMPOS -->
@@ -227,13 +257,67 @@
     </div>
 
 
-    <!-- 🔹 CUADROS DE COLORES ABAJO -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-6 pb-0 z-0">
-        <div class="w-[250px] h-[250px] bg-ilustra rounded-t-2xl sombra-tarjeta"></div>
-        <div class="w-[250px] h-[250px] bg-ai rounded-t-2xl sombra-tarjeta"></div>
-        <div class="w-[250px] h-[250px] bg-web rounded-t-2xl sombra-tarjeta"></div>
-        <div class="w-[250px] h-[250px] bg-estudiante rounded-t-2xl sombra-tarjeta"></div>
-        <div class="w-[250px] h-[250px] bg-hoja rounded-t-2xl sombra-tarjeta"></div>
+    <!-- 🔹 ✅ CUADROS DE COLORES: SOLO LOS 4, CON ICONOS, ESTRELLAS Y EFECTO GLASS -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-6 pb-4 z-0">
+        <!-- Cuadro 1: Adobe Illustrator -->
+        <div class="w-[200px] h-[220px] cuadro-vidrio bg-cuadro1/80 rounded-t-2xl sombra-tarjeta p-4 flex flex-col items-center justify-center">
+            <div class="w-12 h-12 bg-black/30 rounded-lg flex items-center justify-center mb-3">
+                <i class="fa-brands fa-adobe text-white text-xl"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-lg mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="text-white text-xs font-light">Adobe Illustrator</span>
+        </div>
+
+        <!-- Cuadro 2: Inteligencia Artificial -->
+        <div class="w-[200px] h-[220px] cuadro-vidrio bg-cuadro2/80 rounded-t-2xl sombra-tarjeta p-4 flex flex-col items-center justify-center">
+            <div class="w-12 h-12 bg-black/30 rounded-lg flex items-center justify-center mb-3">
+                <i class="fa-solid fa-brain text-white text-xl"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-lg mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-white text-xs font-light">Inteligencia Artificial</span>
+        </div>
+
+        <!-- Cuadro 3: Páginas Web -->
+        <div class="w-[200px] h-[220px] cuadro-vidrio bg-cuadro3/80 rounded-t-2xl sombra-tarjeta p-4 flex flex-col items-center justify-center">
+            <div class="w-12 h-12 bg-black/30 rounded-lg flex items-center justify-center mb-3">
+                <i class="fa-solid fa-globe text-white text-xl"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-lg mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="text-white text-xs font-light">Páginas Web</span>
+        </div>
+
+        <!-- Cuadro 4: Trabajos Estudiantiles -->
+        <div class="w-[200px] h-[220px] cuadro-vidrio bg-cuadro4/80 rounded-t-2xl sombra-tarjeta p-4 flex flex-col items-center justify-center">
+            <div class="w-12 h-12 bg-black/30 rounded-lg flex items-center justify-center mb-3">
+                <i class="fa-solid fa-graduation-cap text-white text-xl"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-lg mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <span class="text-white text-xs font-light">Trabajos Estudiantiles</span>
+        </div>
     </div>
 
 </body>
