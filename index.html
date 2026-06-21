@@ -5,30 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe Andre Villacres Guevara | Mercy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        cristal: 'rgba(255, 255, 255, 0.08)',
-                        borde: 'rgba(255, 255, 255, 0.2)',
+                        vidrio_rosa: 'rgba(180, 40, 80, 0.22)',
+                        vidrio_rojo: 'rgba(200, 30, 50, 0.25)',
+                        vidrio_morado: 'rgba(120, 40, 150, 0.2)',
+                        vidrio_azul_negro: 'rgba(30, 30, 50, 0.3)',
+                        borde_vidrio: 'rgba(255, 255, 255, 0.15)',
                         texto: '#ffffff',
-                        // Colores cuadros
-                        cuadro1: '#007AFF',
-                        cuadro2: '#5B42D3',
-                        cuadro3: '#E91E63',
-                        cuadro4: '#00B498',
-                        // Colores Instagram
-                        ig_rosa: '#E1306C',
-                        ig_morado: '#C13584',
-                        ig_naranja: '#F56040',
-                        ig_amarillo: '#FFDC80',
-                        ig_rojo: '#FD1D1D',
+                        exp_rosa: '#ff4d6d',
+                        exp_morado: '#c77dff',
+                        exp_naranja: '#ff9e00',
+                        exp_amarillo: '#fee440',
+                        azul_neon: '#00f5ff',
+                        rosa_neon: '#ff2e88',
                     },
                     fontFamily: {
-                        profesional: ['"Quicksand"', 'sans-serif'],
                         inter: ['"Inter"', 'sans-serif'],
                     },
                 }
@@ -43,42 +40,37 @@
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            .efecto-vidrio {
-                background: rgba(255, 255, 255, 0.08);
+            .efecto-vidrio-rosa {
+                background: rgba(180, 40, 80, 0.22);
                 backdrop-filter: blur(14px);
                 -webkit-backdrop-filter: blur(14px);
                 border: 1px solid rgba(255, 255, 255, 0.15);
-                border-radius: 1rem;
+                border-radius: 0.7rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
             }
-            .cuadro-vidrio {
-                background: rgba(255, 255, 255, 0.12);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 1rem;
+            .efecto-vidrio-rojo {
+                background: rgba(200, 30, 50, 0.25);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 0.7rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
             }
-            /* Estilo: Perfil vidrio neón */
-            .perfil-neon {
-                background: rgba(255, 255, 255, 0.05);
+            .efecto-vidrio-morado {
+                background: rgba(120, 40, 150, 0.2);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 0.7rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            }
+            .instagram-vidrio {
+                background: rgba(30, 30, 50, 0.3);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
-                border-radius: 1.5rem;
-                border: 2px solid transparent;
-                background-clip: padding-box;
-                box-shadow: 0 0 25px rgba(255, 46, 136, 0.2), 0 0 40px rgba(0, 245, 255, 0.15);
-                position: relative;
-            }
-            .perfil-neon::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                border-radius: 1.5rem;
-                padding: 2px;
-                background: linear-gradient(135deg, #ff2e88, #00f5ff);
-                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                -webkit-mask-composite: xor;
-                mask-composite: exclude;
-                pointer-events: none;
+                border: 1px solid rgba(0, 245, 255, 0.25);
+                border-radius: 1.2rem;
+                box-shadow: 0 0 20px rgba(0, 245, 255, 0.08);
             }
             .texto-neon {
                 background: linear-gradient(90deg, #ff2e88, #00f5ff);
@@ -86,112 +78,125 @@
                 background-clip: text;
                 color: transparent;
             }
-            .sombra-tarjeta {
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            }
         }
     </style>
 </head>
 <body class="fondo-imagen text-texto min-h-screen font-inter p-6 relative overflow-hidden">
 
-    <!-- 🔹 TARJETA DE PERFIL PRINCIPAL - ARRIBA IZQUIERDA -->
-    <div class="efecto-vidrio p-4 w-full max-w-md shadow-lg z-40 relative">
+    <!-- 🔹 PERFIL PRINCIPAL - ARRIBA IZQUIERDA -->
+    <div class="efecto-vidrio-rosa p-4 w-[340px] z-40 absolute top-6 left-6">
         <div class="flex items-center gap-3 mb-2">
-            <div class="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-borde shadow-md">
-                <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
+            <div class="w-[52px] h-[52px] rounded-full overflow-hidden border border-borde_vidrio">
+                <img src="2.png" alt="Joe Andre" class="w-full h-full object-cover">
             </div>
             <div>
-                <h3 class="font-light text-base">Joe Andre Villacres Guevara</h3>
-                <p class="text-xs text-white/80 font-light">Comunicador Digital · Diseñador</p>
+                <h3 class="font-medium text-sm">Joe Andre Villacres Guevara</h3>
+                <p class="text-[10px] text-white/75">Comunicador Digital · Diseñador</p>
             </div>
         </div>
-        <p class="font-profesional font-light text-xs leading-relaxed text-white/95">
+        <p class="text-[10px] leading-relaxed text-white/85">
             Soy comunicador digital con experiencia en Adobe Illustrador e inteligencia artificial, hago trabajos estudiantiles, hojas de vida, páginas web y publicidad. Me adapto a cualquier tipo de trabajo como vectorizar logotipos, diseños y alguna otra especialidad.
         </p>
     </div>
 
 
-    <!-- 🔹 PASATIEMPOS - DEBAJO DE TU PERFIL -->
-    <div class="absolute top-[180px] left-6 efecto-vidrio p-4 w-full max-w-md shadow-lg z-30">
-        <h3 class="text-center text-sm font-light mb-2">Pasatiempos</h3>
-        <div class="w-full h-28 rounded-lg mb-2 overflow-hidden border border-borde">
-            <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
-        </div>
-        <p class="font-profesional font-light text-[10px] leading-relaxed text-white text-center">
-            Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
-        </p>
-    </div>
-
-
-    <!-- 🔹 EXPERIENCIA - AL LADO DE TU PERFIL (ARRIBA DERECHA) -->
-    <div class="absolute top-6 right-6 efecto-vidrio p-4 w-[280px] shadow-lg z-30">
-        <h3 class="text-center text-sm font-light mb-3 texto-neon">Experiencia</h3>
-        <ul class="space-y-2 text-white/90 text-[11px]">
+    <!-- 🔹 EXPERIENCIA - ARRIBA, AL LADO DEL PERFIL -->
+    <div class="efecto-vidrio-morado p-4 w-[280px] z-40 absolute top-6 left-[370px]">
+        <h3 class="text-center text-xs font-medium mb-3 text-sky-300">Experiencia</h3>
+        <ul class="space-y-2 text-white/90 text-[10px]">
             <li class="flex items-start gap-2">
-                <i class="fa-solid fa-briefcase text-ig_rosa mt-0.5"></i>
+                <i class="fa-solid fa-briefcase text-exp_rosa mt-0.5"></i>
                 <span><strong>8 años</strong> en atención al cliente</span>
             </li>
             <li class="flex items-start gap-2">
-                <i class="fa-solid fa-building text-ig_morado mt-0.5"></i>
+                <i class="fa-solid fa-building text-exp_morado mt-0.5"></i>
                 <span><strong>2 años</strong> en COOPERATIVA TOURIS SAN FRANCISCO</span>
             </li>
             <li class="flex items-start gap-2">
-                <i class="fa-solid fa-truck text-ig_naranja mt-0.5"></i>
+                <i class="fa-solid fa-truck text-exp_naranja mt-0.5"></i>
                 <span><strong>1 año</strong> en AGEEPCOURIER ECUADOR S.A</span>
             </li>
             <li class="flex items-start gap-2">
-                <i class="fa-solid fa-gamepad text-ig_amarillo mt-0.5"></i>
+                <i class="fa-solid fa-gamepad text-exp_amarillo mt-0.5"></i>
                 <span><strong>6 MESES</strong> EN HOUSE GAMING CYBER</span>
             </li>
         </ul>
     </div>
 
 
-    <!-- 🔹 CUADROS DE HABILIDADES - CENTRO INFERIOR -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-20">
-        <div class="cuadro-vidrio bg-cuadro1/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-brands fa-adobe text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Adobe Illustrator</span>
+    <!-- 🔹 PASATIEMPOS - DEBAJO DEL PERFIL IZQUIERDA -->
+    <div class="efecto-vidrio-rojo p-3 w-[340px] z-40 absolute top-[120px] left-6">
+        <h3 class="text-center text-xs font-medium mb-2">Pasatiempos</h3>
+        <div class="w-full h-28 rounded overflow-hidden border border-borde_vidrio mb-2">
+            <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
         </div>
-        <div class="cuadro-vidrio bg-cuadro2/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-brain text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Inteligencia Artificial</span>
+        <p class="text-[9px] leading-relaxed text-white/85 text-center">
+            Ilustración, navegar en busca de conocimiento y mejorar mi velocidad, vectorizar png
+        </p>
+    </div>
+
+
+    <!-- 🔹 HABILIDADES - CENTRO INFERIOR -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-4 z-30">
+        <div class="efecto-vidrio-morado p-3 w-[140px] h-[160px] flex flex-col items-center justify-center">
+            <div class="w-8 h-8 bg-black/20 rounded flex items-center justify-center mb-2">
+                <i class="fa-brands fa-adobe text-white text-base"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="text-white text-[9px] text-center">Adobe Illustrator</span>
         </div>
-        <div class="cuadro-vidrio bg-cuadro3/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-globe text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Páginas Web</span>
+        <div class="efecto-vidrio-morado p-3 w-[140px] h-[160px] flex flex-col items-center justify-center">
+            <div class="w-8 h-8 bg-black/20 rounded flex items-center justify-center mb-2">
+                <i class="fa-solid fa-brain text-white text-base"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-white text-[9px] text-center">Inteligencia Artificial</span>
         </div>
-        <div class="cuadro-vidrio bg-cuadro4/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-graduation-cap text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Trabajos Estudiantiles</span>
+        <div class="efecto-vidrio-morado p-3 w-[140px] h-[160px] flex flex-col items-center justify-center">
+            <div class="w-8 h-8 bg-black/20 rounded flex items-center justify-center mb-2">
+                <i class="fa-solid fa-globe text-white text-base"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="text-white text-[9px] text-center">Páginas Web</span>
+        </div>
+        <div class="efecto-vidrio-morado p-3 w-[140px] h-[160px] flex flex-col items-center justify-center">
+            <div class="w-8 h-8 bg-black/20 rounded flex items-center justify-center mb-2">
+                <i class="fa-solid fa-graduation-cap text-white text-base"></i>
+            </div>
+            <div class="flex gap-1 text-yellow-400 text-xs mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <span class="text-white text-[9px] text-center">Trabajos Estudiantiles</span>
         </div>
     </div>
 
 
-    <!-- 🔹 PANTALLA INSTAGRAM - ESQUINA INFERIOR DERECHA -->
-    <div class="absolute bottom-6 right-6 perfil-neon w-[280px] h-[480px] p-3 z-50">
+    <!-- 🔹 INSTAGRAM - ESQUINA INFERIOR DERECHA -->
+    <div class="instagram-vidrio p-3 w-[260px] h-[440px] z-50 absolute bottom-6 right-6">
         <!-- Encabezado -->
         <div class="flex justify-between items-center mb-2">
-            <i class="fa-solid fa-plus text-white text-base"></i>
-            <span class="texto-neon font-semibold text-sm">joeandremerecy</span>
+            <i class="fa-solid fa-plus text-white text-sm"></i>
+            <span class="texto-neon font-semibold text-xs">joeandremerecy</span>
             <div class="flex gap-2">
-                <i class="fa-solid fa-circle-question text-white/70 text-sm"></i>
-                <i class="fa-solid fa-bars text-white/70 text-sm"></i>
+                <i class="fa-solid fa-circle-question text-white/60 text-xs"></i>
+                <i class="fa-solid fa-bars text-white/60 text-xs"></i>
             </div>
         </div>
 
         <!-- Datos perfil -->
         <div class="flex items-center gap-2 mb-2">
-            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-pink-500/50">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-rosa_neon/50">
                 <img src="2.png" class="w-full h-full object-cover">
             </div>
             <div class="flex-1">
-                <h2 class="font-semibold text-xs">JOE ANDRE VILLACRES GUEVARA</h2>
-                <div class="flex gap-2 text-[10px] text-white/80 mt-1">
+                <h2 class="font-semibold text-[9px]">JOE ANDRE VILLACRES GUEVARA</h2>
+                <div class="flex gap-2 text-[8px] text-white/70 mt-1">
                     <span><strong>0</strong> publicaciones</span>
                     <span><strong>20</strong> seguidores</span>
                     <span><strong>52</strong> seguidos</span>
@@ -201,41 +206,41 @@
 
         <!-- Botones -->
         <div class="flex gap-2 mb-3">
-            <button class="flex-1 bg-white/10 rounded-lg py-1.5 text-[10px]">Editar perfil</button>
-            <button class="flex-1 bg-white/10 rounded-lg py-1.5 text-[10px]">Ver archivo</button>
+            <button class="flex-1 bg-white/10 rounded py-1 text-[8px]">Editar perfil</button>
+            <button class="flex-1 bg-white/10 rounded py-1 text-[8px]">Ver archivo</button>
         </div>
 
         <!-- Nueva historia -->
         <div class="flex flex-col items-center mb-3">
-            <div class="w-9 h-9 rounded-full border-2 border-dashed border-white/40 flex items-center justify-center mb-1">
-                <i class="fa-solid fa-plus text-white/60 text-sm"></i>
+            <div class="w-8 h-8 rounded-full border-2 border-dashed border-white/30 flex items-center justify-center mb-1">
+                <i class="fa-solid fa-plus text-white/50 text-xs"></i>
             </div>
-            <span class="text-[9px] text-white/70">Nueva</span>
+            <span class="text-[8px] text-white/60">Nueva</span>
         </div>
 
         <!-- Iconos navegación -->
-        <div class="flex justify-around text-white/70 mb-2 border-b border-white/10 pb-1">
-            <i class="fa-solid fa-table-cells text-white text-base"></i>
-            <i class="fa-regular fa-bookmark text-base"></i>
-            <i class="fa-solid fa-arrows-rotate text-base"></i>
-            <i class="fa-regular fa-user text-base"></i>
+        <div class="flex justify-around text-white/60 mb-2 border-b border-white/10 pb-1">
+            <i class="fa-solid fa-table-cells text-white text-sm"></i>
+            <i class="fa-regular fa-bookmark text-sm"></i>
+            <i class="fa-solid fa-arrows-rotate text-sm"></i>
+            <i class="fa-regular fa-user text-sm"></i>
         </div>
 
         <!-- Mensaje vacío -->
-        <div class="text-center py-3">
-            <i class="fa-solid fa-camera text-white/20 text-2xl mb-1"></i>
-            <p class="font-light text-xs">Comparte fotos</p>
-            <p class="text-[9px] text-white/60 mt-1">Cuando compartas fotos, aparecerán en tu perfil.</p>
-            <a href="#" class="text-[9px] text-blue-400 mt-1 inline-block">Compartir tu primera foto</a>
+        <div class="text-center py-2">
+            <i class="fa-solid fa-camera text-white/20 text-xl mb-1"></i>
+            <p class="text-[9px]">Comparte fotos</p>
+            <p class="text-[7px] text-white/50 mt-1">Cuando compartas fotos, aparecerán en tu perfil.</p>
+            <a href="#" class="text-[7px] text-sky-400 mt-1 inline-block">Compartir tu primera foto</a>
         </div>
 
         <!-- Navegación inferior -->
-        <div class="absolute bottom-2 left-0 w-full flex justify-around text-white/70 px-3">
-            <i class="fa-solid fa-house text-white text-base"></i>
-            <i class="fa-brands fa-instagram text-base"></i>
-            <i class="fa-solid fa-paper-plane text-base"></i>
-            <i class="fa-solid fa-magnifying-glass text-base"></i>
-            <i class="fa-regular fa-circle-user text-base"></i>
+        <div class="absolute bottom-2 left-0 w-full flex justify-around text-white/60 px-3">
+            <i class="fa-solid fa-house text-white text-sm"></i>
+            <i class="fa-brands fa-instagram text-sm"></i>
+            <i class="fa-solid fa-paper-plane text-sm"></i>
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+            <i class="fa-regular fa-circle-user text-sm"></i>
         </div>
     </div>
 
