@@ -64,9 +64,9 @@
             <!-- Navegación Escritorio -->
             <nav class="hidden md:flex gap-8">
                 <a href="#inicio" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Inicio</a>
-                <a href="#portafolio" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Portafolio</a>
+                <a href="#mis-disenos" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Mis Diseños</a>
                 <a href="#sobre-mi" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Sobre mí</a>
-                <a href="#servicios" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Servicios</a>
+                <a href="#habilidades" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Habilidades</a>
                 <a href="#contacto" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Contacto</a>
             </nav>
 
@@ -80,9 +80,9 @@
         <div id="menuMovil" class="hidden md:hidden bg-anime-dark/95 shadow-md">
             <nav class="flex flex-col gap-3 p-4">
                 <a href="#inicio" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Inicio</a>
-                <a href="#portafolio" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Portafolio</a>
+                <a href="#mis-disenos" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Mis Diseños</a>
                 <a href="#sobre-mi" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Sobre mí</a>
-                <a href="#servicios" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Servicios</a>
+                <a href="#habilidades" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Habilidades</a>
                 <a href="#contacto" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Contacto</a>
             </nav>
         </div>
@@ -105,11 +105,11 @@
                 </h1>
                 <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-anime-purple text-shadow-neon mb-4">Conocido como Mercy</h2>
                 <p class="text-lg text-anime-light/90 mb-8 max-w-xl font-light">
-                    Diseñador gráfico con alma creativa, estilo anime y pasión por lo visual. Creo mundos, personajes y marcas que despiertan emociones y destacan con personalidad única.
+                    Diseñador gráfico con alma creativa, estilo anime y pasión por lo visual. Creo mundos, personajes y diseños que despiertan emociones y destacan con personalidad única.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#portafolio" class="bg-anime-pink text-white px-8 py-3 rounded-lg font-bold hover:shadow-neon-pink transition-all transform hover:-translate-y-1">
-                        Ver Creaciones
+                    <a href="#mis-disenos" class="bg-anime-pink text-white px-8 py-3 rounded-lg font-bold hover:shadow-neon-pink transition-all transform hover:-translate-y-1">
+                        Ver Mis Diseños
                     </a>
                     <a href="#contacto" class="border-2 border-anime-blue text-anime-blue px-8 py-3 rounded-lg font-bold hover:bg-anime-blue/10 hover:shadow-neon-blue transition-all">
                         Trabajemos Juntos
@@ -127,37 +127,59 @@
         </div>
     </section>
 
-    <!-- Sección Portafolio -->
-    <section id="portafolio" class="py-20 bg-white">
+    <!-- 🆕 SECCIÓN: MIS DISEÑOS (Para subir tus imágenes) -->
+    <section id="mis-disenos" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4 text-anime-dark">Mi Galería Creativa</h2>
-            <p class="text-center text-anime-purple font-semibold mb-16">Estilo, color y magia visual en cada proyecto</p>
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4 text-anime-dark">Mis Diseños</h2>
+            <p class="text-center text-anime-purple font-semibold mb-16">Aquí encontrarás toda mi colección artística y creaciones</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Proyecto 1 -->
-                <div class="card-anime bg-anime-light rounded-xl overflow-hidden shadow-lg border-2 border-anime-pink/20">
-                    <img src="https://picsum.photos/id/1015/600/400" alt="Diseño de Personaje" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="font-bold text-xl mb-2 text-anime-pink">Diseño de Personajes</h3>
-                        <p class="text-anime-dark/70">Creación de personajes originales con estética anime, diseños completos y hojas de referencia.</p>
+            <!-- 📌 INSTRUCCIÓN: Aquí puedes agregar tus imágenes copiando y pegando el bloque de abajo -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- 🖼️ BLOQUE DE IMAGEN (Copia este bloque para agregar más diseños) -->
+                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-pink/20">
+                    <!-- Reemplaza el enlace de abajo por la URL de tu imagen -->
+                    <img src="https://picsum.photos/id/1015/600/600" alt="Título de tu diseño" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-5 w-full">
+                            <h3 class="text-white font-bold text-xl">Ilustración Anime</h3>
+                            <p class="text-anime-blue text-sm">Diseño original • Mercy</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Proyecto 2 -->
-                <div class="card-anime bg-anime-light rounded-xl overflow-hidden shadow-lg border-2 border-anime-blue/20">
-                    <img src="https://picsum.photos/id/1019/600/400" alt="Identidad Visual" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="font-bold text-xl mb-2 text-anime-blue">Identidad Visual</h3>
-                        <p class="text-anime-dark/70">Logotipos y marcas con estilo moderno y toques artísticos, únicos y memorables.</p>
+                <!-- FIN DEL BLOQUE -->
+
+                <!-- Repite el bloque cuantas veces quieras -->
+                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-blue/20">
+                    <img src="https://picsum.photos/id/1019/600/600" alt="Diseño de Logotipo" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-5 w-full">
+                            <h3 class="text-white font-bold text-xl">Identidad Visual</h3>
+                            <p class="text-anime-blue text-sm">Diseño de Marca • Mercy</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Proyecto 3 -->
-                <div class="card-anime bg-anime-light rounded-xl overflow-hidden shadow-lg border-2 border-anime-purple/20">
-                    <img src="https://picsum.photos/id/1021/600/400" alt="Ilustración Digital" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="font-bold text-xl mb-2 text-anime-purple">Ilustración Digital</h3>
-                        <p class="text-anime-dark/70">Arte digital, portadas, carteles y piezas gráficas llenas de color y narrativa visual.</p>
+
+                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-purple/20">
+                    <img src="https://picsum.photos/id/1021/600/600" alt="Arte Digital" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-5 w-full">
+                            <h3 class="text-white font-bold text-xl">Arte Digital</h3>
+                            <p class="text-anime-blue text-sm">Ilustración • Mercy</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-pink/20">
+                    <img src="https://picsum.photos/id/1028/600/600" alt="Personaje Original" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-5 w-full">
+                            <h3 class="text-white font-bold text-xl">Diseño de Personaje</h3>
+                            <p class="text-anime-blue text-sm">Creación propia • Mercy</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -176,7 +198,7 @@
                     Soy diseñador gráfico e ilustrador con una gran pasión por la cultura pop, el anime y el arte visual. Para mí, diseñar es crear universos y dar vida a las ideas.
                 </p>
                 <p class="text-anime-dark/80 mb-6 leading-relaxed">
-                    Me especializo en estilos vibrantes, líneas definidas y composiciones que cuentan historias. Domino herramientas como Adobe Illustrator, Photoshop, Clip Studio Paint y Blender. Mi objetivo es que cada proyecto tenga alma y estilo propio.
+                    Me especializo en estilos vibrantes, líneas definidas y composiciones que cuentan historias. Mi objetivo es que cada proyecto tenga alma y estilo propio.
                 </p>
                 <div class="flex gap-4">
                     <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-behance"></i></a>
@@ -188,26 +210,48 @@
         </div>
     </section>
 
-    <!-- Sección Servicios -->
-    <section id="servicios" class="py-20 bg-white">
+    <!-- 🆕 SECCIÓN: HABILIDADES (Antes Servicios) -->
+    <section id="habilidades" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-16 text-anime-dark">Mis Servicios Creativos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-16 text-anime-dark">Mis Habilidades</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                
                 <div class="card-anime p-8 bg-gradient-to-b from-anime-pink/5 to-anime-pink/20 rounded-xl text-center border-b-4 border-anime-pink">
                     <i class="fa fa-paint-brush text-4xl text-anime-pink mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Ilustración & Arte</h3>
-                    <p class="text-anime-dark/70">Diseño de personajes, fondos, ilustraciones para libros, juegos o redes sociales con estilo anime y original.</p>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Ilustración Digital</h3>
+                    <p class="text-anime-dark/70">Dibujo, diseño de personajes y arte conceptual con estilo anime y manga.</p>
                 </div>
+
                 <div class="card-anime p-8 bg-gradient-to-b from-anime-blue/5 to-anime-blue/20 rounded-xl text-center border-b-4 border-anime-blue">
-                    <i class="fa fa-palette text-4xl text-anime-blue mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Diseño de Marca</h3>
-                    <p class="text-anime-dark/70">Creación de identidad visual, logotipos y manuales de marca con personalidad y estilo único.</p>
+                    <i class="fa fa-laptop text-4xl text-anime-blue mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Diseño Gráfico</h3>
+                    <p class="text-anime-dark/70">Creación de logotipos, identidad de marca, carteles y material publicitario.</p>
                 </div>
+
                 <div class="card-anime p-8 bg-gradient-to-b from-anime-purple/5 to-anime-purple/20 rounded-xl text-center border-b-4 border-anime-purple">
-                    <i class="fa fa-magic text-4xl text-anime-purple mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Contenido Visual</h3>
-                    <p class="text-anime-dark/70">Diseño para redes sociales, carteles, portadas y material publicitario que llama la atención.</p>
+                    <i class="fa fa-pencil-square-o text-4xl text-anime-purple mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Dibujo Tradicional</h3>
+                    <p class="text-anime-dark/70">Bocetos, dibujo a lápiz, composición y anatomía artística.</p>
                 </div>
+
+                <div class="card-anime p-8 bg-gradient-to-b from-anime-yellow/5 to-anime-yellow/20 rounded-xl text-center border-b-4 border-anime-yellow">
+                    <i class="fa fa-file-photo-o text-4xl text-anime-yellow mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Edición de Imagen</h3>
+                    <p class="text-anime-dark/70">Retoque, composición y manipulación digital con Photoshop.</p>
+                </div>
+
+                <div class="card-anime p-8 bg-gradient-to-b from-anime-pink/5 to-anime-pink/20 rounded-xl text-center border-b-4 border-anime-pink">
+                    <i class="fa fa-code text-4xl text-anime-pink mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Diseño Web Básico</h3>
+                    <p class="text-anime-dark/70">Maquetación y diseño visual para páginas y portafolios.</p>
+                </div>
+
+                <div class="card-anime p-8 bg-gradient-to-b from-anime-blue/5 to-anime-blue/20 rounded-xl text-center border-b-4 border-anime-blue">
+                    <i class="fa fa-video-camera text-4xl text-anime-blue mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Animación 2D</h3>
+                    <p class="text-anime-dark/70">Pequeñas animaciones, motion graphics y efectos visuales.</p>
+                </div>
+
             </div>
         </div>
     </section>
