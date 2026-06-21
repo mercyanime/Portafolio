@@ -64,6 +64,14 @@
                 border-radius: 0.7rem;
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
             }
+            .efecto-vidrio-azul {
+                background: rgba(40, 80, 180, 0.22);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 0.7rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            }
             .instagram-vidrio {
                 background: rgba(30, 30, 50, 0.3);
                 backdrop-filter: blur(20px);
@@ -77,6 +85,11 @@
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
+            }
+            .icono-app {
+                background-image: url('apps.png');
+                background-size: 400% 400%; /* Ajusta según cuántas imágenes tengas en el archivo */
+                background-repeat: no-repeat;
             }
         }
     </style>
@@ -124,7 +137,7 @@
     </div>
 
 
-    <!-- 🔹 PASATIEMPOS - CON EL TEXTO COMPLETO QUE ME DISTE -->
+    <!-- 🔹 PASATIEMPOS - CON EL TEXTO COMPLETO -->
     <div class="efecto-vidrio-rojo p-3 w-[340px] z-40 absolute top-[200px] left-6">
         <h3 class="text-center text-xs font-medium mb-2">Pasatiempos</h3>
         <div class="w-full h-28 rounded overflow-hidden border border-borde_vidrio mb-2">
@@ -133,6 +146,49 @@
         <p class="text-[9px] leading-relaxed text-white/85 text-center">
             Vectorizar logos - crear diseños propios de banners - Mejorar velocidad de vectorizado - Impulsar redes sociales - buscar medios de aprendisaje para mayor velocidad en mi trabajo - gestionar mi carpeta de banners - logos - overlays - vectores - texturas etc
         </p>
+    </div>
+
+
+    <!-- 🔹 NUEVO: APPS QUE USO - EFECTO VIDRIO AZUL -->
+    <div class="efecto-vidrio-azul p-4 w-[320px] z-30 absolute bottom-10 left-6">
+        <h3 class="text-center text-xs font-medium mb-3 text-cyan-300">Apps que uso</h3>
+        <div class="grid grid-cols-4 gap-3 justify-items-center">
+            <!-- Adobe Illustrator -->
+            <div class="flex flex-col items-center">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 0% 0%;"></div>
+                <span class="text-[8px] text-center">Illustrator</span>
+            </div>
+            <!-- Inteligencia Artificial -->
+            <div class="flex flex-col items-center">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 33% 0%;"></div>
+                <span class="text-[8px] text-center">IA</span>
+            </div>
+            <!-- Canva -->
+            <div class="flex flex-col items-center">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 66% 0%;"></div>
+                <span class="text-[8px] text-center">Canva</span>
+            </div>
+            <!-- Polarr -->
+            <div class="flex flex-col items-center">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 100% 0%;"></div>
+                <span class="text-[8px] text-center">Polarr</span>
+            </div>
+            <!-- OBS Studio -->
+            <div class="flex flex-col items-center">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 0% 100%;"></div>
+                <span class="text-[8px] text-center">OBS</span>
+            </div>
+            <!-- CapCut -->
+            <div class="flex flex-col items-center">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 33% 100%;"></div>
+                <span class="text-[8px] text-center">CapCut</span>
+            </div>
+            <!-- GitHub -->
+            <div class="flex flex-col items-center col-span-2">
+                <div class="icono-app w-9 h-9 rounded-md border border-borde_vidrio mb-1" style="background-position: 66% 100%;"></div>
+                <span class="text-[8px] text-center">GitHub</span>
+            </div>
+        </div>
     </div>
 
 
