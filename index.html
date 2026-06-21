@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe Andre Villacres Guevara | Mercy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fuente nueva: más profesional, fina y legible -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -13,8 +12,9 @@
             theme: {
                 extend: {
                     colors: {
-                        cristal: 'rgba(255, 255, 255, 0.12)',
-                        borde: 'rgba(255, 255, 255, 0.25)',
+                        cristal: 'rgba(255, 255, 255, 0.1)',
+                        cristal2: 'rgba(40, 40, 60, 0.25)',
+                        borde: 'rgba(255, 255, 255, 0.2)',
                         texto: '#ffffff',
                         ilustra: '#007AFF',
                         ai: '#5B42D3',
@@ -22,14 +22,14 @@
                         estudiante: '#00B498',
                         hoja: '#FF9500',
                         vector: '#34C759',
-                        // Paleta de colores exacta
+                        // Paleta CORREGIDA, con fondo diferente para que se vea
                         color1: '#1C4A3C',
                         color2: '#85C254',
                         color3: '#E8F3C2',
                         color4: '#F8F8F5',
+                        fondo_paleta: 'rgba(20, 20, 30, 0.4)',
                     },
                     fontFamily: {
-                        // Nueva letra: Quicksand (moderna, fina y profesional)
                         profesional: ['"Quicksand"', 'sans-serif'],
                         inter: ['"Inter"', 'sans-serif'],
                     },
@@ -46,26 +46,36 @@
                 background-repeat: no-repeat;
             }
             .efecto-vidrio {
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
-                border: 1px solid rgba(255, 255, 255, 0.18);
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+            .efecto-vidrio-oscuro {
+                background: rgba(20, 20, 30, 0.2);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
             }
             .sombra-tarjeta {
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             }
             .icono-estilo {
                 @apply w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm;
+            }
+            .barra-volumen {
+                background: linear-gradient(to right, #007AFF, #5B42D3);
             }
         }
     </style>
 </head>
 <body class="fondo-imagen text-texto min-h-screen font-inter p-6 relative overflow-hidden">
 
-    <!-- 🔹 TU TARJETA DE PERFIL (ARRIBA IZQUIERDA, LETRA NUEVA Y FINA) -->
-    <div class="efecto-vidrio rounded-2xl p-4 w-full max-w-md shadow-lg">
-        <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full overflow-hidden border border-borde">
+    <!-- 🔹 TARJETA DE PERFIL: ICONO MÁS GRANDE -->
+    <div class="efecto-vidrio rounded-2xl p-5 w-full max-w-md shadow-lg z-30 relative">
+        <div class="flex items-center gap-4 mb-3">
+            <!-- ✅ ICONO AGUANDADO: 140px, se ve muy bien -->
+            <div class="w-[70px] h-[70px] rounded-full overflow-hidden border-2 border-borde shadow-md">
                 <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
             </div>
             <div>
@@ -73,16 +83,46 @@
                 <p class="text-xs text-white/80 font-light">Comunicador Digital · Diseñador</p>
             </div>
         </div>
-        <p class="font-profesional font-light text-base leading-relaxed text-white/95">
+        <p class="font-profesional font-light text-sm leading-relaxed text-white/95">
             Soy comunicador digital con experiencia en Adobe Illustrador e inteligencia artificial, hago trabajos estudiantiles, hojas de vida, páginas web y publicidad. Me adapto a cualquier tipo de trabajo como vectorizar logotipos, diseños y alguna otra especialidad.
         </p>
     </div>
 
 
-    <!-- 🔹 BARRA LATERAL DERECHA (TODO IGUAL, LETRA FINA) -->
+    <!-- 🔹 WIDGET DE MÚSICA TRANSPARENTE Y FUNCIONAL (estilo de la imagen) -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 efecto-vidrio-oscuro rounded-2xl p-4 w-[320px] shadow-lg z-40">
+        <div class="flex items-center gap-3 mb-3">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-borde">
+                <img src="3.png" alt="Portada canción" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h4 class="font-light text-sm">Canción Favorita</h4>
+                <p class="text-[10px] text-white/70 font-light">Artista - Título</p>
+            </div>
+        </div>
+
+        <!-- Controles de audio -->
+        <audio controls class="w-full h-8 rounded-lg bg-transparent border-none outline-none [&::-webkit-media-controls-panel]:bg-white/10 [&::-webkit-media-controls-current-time-display]:text-white [&::-webkit-media-controls-time-remaining-display]:text-white [&::-webkit-media-controls-play-button]:bg-white/20 [&::-webkit-media-controls-volume-slider]:barra-volumen">
+            <source src="musica.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        
+
+        <!-- Barra de ecualización decorativa -->
+        <div class="flex items-end justify-center gap-[2px] h-5 mt-2">
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 40%; animation-delay: 0s"></div>
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 70%; animation-delay: 0.1s"></div>
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 55%; animation-delay: 0.2s"></div>
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 90%; animation-delay: 0.3s"></div>
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 45%; animation-delay: 0.4s"></div>
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 75%; animation-delay: 0.5s"></div>
+            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 60%; animation-delay: 0.6s"></div>
+        </div>
+    </div>
+
+
+    <!-- 🔹 BARRA LATERAL DERECHA -->
     <div class="absolute top-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
         <div class="flex flex-col gap-3">
-            
             <div class="flex items-center gap-2">
                 <div class="icono-estilo bg-ilustra"><i class="fa-brands fa-adobe"></i></div>
                 <span class="text-xs font-light">Adobe Illustrador</span>
@@ -111,36 +151,34 @@
     </div>
 
 
-    <!-- 🔹 TARJETA DE PASATIEMPOS: IMAGEN 3.png + LETRA NUEVA MUCHO MÁS FINA -->
-    <div class="absolute top-1/2 left-10 -translate-y-1/2 efecto-vidrio rounded-2xl p-6 w-full max-w-lg shadow-lg z-10">
-        <h3 class="text-center text-lg font-light mb-4">Pasatiempos</h3>
+    <!-- 🔹 TARJETA DE PASATIEMPOS: IMAGEN 3.png + LETRA PROFESIONAL -->
+    <div class="absolute top-1/2 left-10 -translate-y-1/2 efecto-vidrio rounded-2xl p-5 w-full max-w-sm shadow-lg z-10">
+        <h3 class="text-center text-base font-light mb-3">Pasatiempos</h3>
         
-        <!-- ✅ IMAGEN 3.png YA COLOCADA AQUÍ -->
-        <div class="w-full h-40 rounded-xl mb-4 overflow-hidden border border-borde">
+        <div class="w-full h-36 rounded-xl mb-3 overflow-hidden border border-borde">
             <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
         </div>
 
-        <!-- ✅ LETRA NUEVA: PROFESIONAL, FINA Y MUY LEGIBLE -->
-        <p class="font-profesional font-light text-base leading-relaxed text-white text-center">
+        <p class="font-profesional font-light text-xs leading-relaxed text-white text-center">
             Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
         </p>
     </div>
 
 
-    <!-- 🔹 PALETA DE COLORES: ABAJO DERECHA, COLORES EXACTOS -->
-    <div class="absolute bottom-6 right-6 efecto-vidrio rounded-2xl p-3 shadow-lg z-20">
-        <p class="text-center text-xs mb-2 font-light">Paleta de colores usada</p>
-        <div class="flex gap-0 rounded-lg overflow-hidden">
-            <div class="w-16 h-10 bg-color1 flex flex-col items-center justify-center text-[10px] text-white font-mono">#1C4A3C</div>
-            <div class="w-16 h-10 bg-color2 flex flex-col items-center justify-center text-[10px] text-black font-mono">#85C254</div>
-            <div class="w-16 h-10 bg-color3 flex flex-col items-center justify-center text-[10px] text-black font-mono">#E8F3C2</div>
-            <div class="w-16 h-10 bg-color4 flex flex-col items-center justify-center text-[10px] text-black font-mono">#F8F8F5</div>
+    <!-- 🔹 PALETA DE COLORES: FONDO DIFERENTE, AHORA SE DISTINGUE PERFECTO -->
+    <div class="absolute bottom-6 right-6 efecto-vidrio-oscuro rounded-2xl p-3 shadow-lg z-20">
+        <p class="text-center text-[10px] mb-2 font-light">Paleta de colores usada</p>
+        <div class="flex gap-0 rounded-lg overflow-hidden border border-borde/30">
+            <div class="w-14 h-9 bg-color1 flex flex-col items-center justify-center text-[9px] text-white font-mono">#1C4A3C</div>
+            <div class="w-14 h-9 bg-color2 flex flex-col items-center justify-center text-[9px] text-black font-mono">#85C254</div>
+            <div class="w-14 h-9 bg-color3 flex flex-col items-center justify-center text-[9px] text-black font-mono">#E8F3C2</div>
+            <div class="w-14 h-9 bg-color4 flex flex-col items-center justify-center text-[9px] text-black font-mono">#F8F8F5</div>
         </div>
     </div>
 
 
     <!-- 🔹 CUADROS DE COLORES: 250px, SEPARADOS, PEGADOS ABAJO -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-6 pb-0">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-6 pb-0 z-0">
         <div class="w-[250px] h-[250px] bg-ilustra rounded-t-2xl sombra-tarjeta"></div>
         <div class="w-[250px] h-[250px] bg-ai rounded-t-2xl sombra-tarjeta"></div>
         <div class="w-[250px] h-[250px] bg-web rounded-t-2xl sombra-tarjeta"></div>
