@@ -22,11 +22,11 @@
                         estudiante: '#00B498',
                         hoja: '#FF9500',
                         vector: '#34C759',
-                        // Paleta CORREGIDA, con fondo diferente para que se vea
-                        color1: '#1C4A3C',
-                        color2: '#85C254',
-                        color3: '#E8F3C2',
-                        color4: '#F8F8F5',
+                        // ✅ PALETA DE COLORES NUEVA (EXACTA DE LA IMAGEN)
+                        color1: '#FF3333',
+                        color2: '#702963',
+                        color3: '#F9F871',
+                        color4: '#4B1E36',
                         fondo_paleta: 'rgba(20, 20, 30, 0.4)',
                     },
                     fontFamily: {
@@ -51,11 +51,11 @@
                 -webkit-backdrop-filter: blur(14px);
                 border: 1px solid rgba(255, 255, 255, 0.15);
             }
-            .efecto-vidrio-oscuro {
-                background: rgba(20, 20, 30, 0.2);
-                backdrop-filter: blur(14px);
-                -webkit-backdrop-filter: blur(14px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
+            .efecto-vidrio-rosa {
+                background: rgba(255, 230, 230, 0.15);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
             .sombra-tarjeta {
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -63,18 +63,14 @@
             .icono-estilo {
                 @apply w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm;
             }
-            .barra-volumen {
-                background: linear-gradient(to right, #007AFF, #5B42D3);
-            }
         }
     </style>
 </head>
 <body class="fondo-imagen text-texto min-h-screen font-inter p-6 relative overflow-hidden">
 
-    <!-- 🔹 TARJETA DE PERFIL: ICONO MÁS GRANDE -->
+    <!-- 🔹 TARJETA DE PERFIL: ICONO GRANDE -->
     <div class="efecto-vidrio rounded-2xl p-5 w-full max-w-md shadow-lg z-30 relative">
         <div class="flex items-center gap-4 mb-3">
-            <!-- ✅ ICONO AGUANDADO: 140px, se ve muy bien -->
             <div class="w-[70px] h-[70px] rounded-full overflow-hidden border-2 border-borde shadow-md">
                 <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
             </div>
@@ -89,33 +85,59 @@
     </div>
 
 
-    <!-- 🔹 WIDGET DE MÚSICA TRANSPARENTE Y FUNCIONAL (estilo de la imagen) -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 efecto-vidrio-oscuro rounded-2xl p-4 w-[320px] shadow-lg z-40">
-        <div class="flex items-center gap-3 mb-3">
-            <div class="w-14 h-14 rounded-lg overflow-hidden border border-borde">
-                <img src="3.png" alt="Portada canción" class="w-full h-full object-cover">
-            </div>
-            <div>
-                <h4 class="font-light text-sm">Canción Favorita</h4>
-                <p class="text-[10px] text-white/70 font-light">Artista - Título</p>
-            </div>
+    <!-- 🔹 ✅ WIDGET DE MÚSICA NUEVO (IGUAL AL EJEMPLO) -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 efecto-vidrio-rosa rounded-3xl p-6 w-[320px] shadow-lg z-40 text-center">
+        <!-- Portada -->
+        <div class="w-full h-40 rounded-2xl overflow-hidden mb-4 border border-white/20">
+            <img src="3.png" alt="Portada canción" class="w-full h-full object-cover">
         </div>
 
-        <!-- Controles de audio -->
-        <audio controls class="w-full h-8 rounded-lg bg-transparent border-none outline-none [&::-webkit-media-controls-panel]:bg-white/10 [&::-webkit-media-controls-current-time-display]:text-white [&::-webkit-media-controls-time-remaining-display]:text-white [&::-webkit-media-controls-play-button]:bg-white/20 [&::-webkit-media-controls-volume-slider]:barra-volumen">
-            <source src="musica.mp3" type="audio/mpeg">
-            Tu navegador no soporta audio.
-        
+        <!-- Títulos -->
+        <h4 class="font-light text-white text-sm mb-1">TERTAWA SEDU</h4>
+        <p class="text-[10px] text-white/70 font-light mb-4">Ketut Susilo</p>
 
-        <!-- Barra de ecualización decorativa -->
-        <div class="flex items-end justify-center gap-[2px] h-5 mt-2">
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 40%; animation-delay: 0s"></div>
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 70%; animation-delay: 0.1s"></div>
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 55%; animation-delay: 0.2s"></div>
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 90%; animation-delay: 0.3s"></div>
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 45%; animation-delay: 0.4s"></div>
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 75%; animation-delay: 0.5s"></div>
-            <div class="w-1 bg-ilustra rounded-t-sm animate-pulse" style="height: 60%; animation-delay: 0.6s"></div>
+        <!-- Barra de progreso -->
+        <div class="w-full h-1 bg-white/20 rounded-full mb-4">
+            <div class="w-1/3 h-full bg-white rounded-full"></div>
+        </div>
+
+        <!-- Controles -->
+        <div class="flex justify-between items-center mb-6 px-4">
+            <i class="fa-solid fa-backward-step text-white/80 text-lg"></i>
+            <i class="fa-solid fa-circle-play text-white text-3xl"></i>
+            <i class="fa-solid fa-forward-step text-white/80 text-lg"></i>
+        </div>
+
+        <!-- Título lista -->
+        <h3 class="text-white text-xl font-light mb-4">Love</h3>
+        <p class="text-[11px] text-white/70 mb-4">Lagu untuk yang sedang patah hati!!</p>
+
+        <!-- Lista de canciones -->
+        <div class="space-y-3 text-left">
+            <div class="flex items-center gap-3">
+                <img src="3.png" class="w-8 h-8 rounded object-cover">
+                <div class="flex-1">
+                    <p class="text-white text-xs">Borcelle</p>
+                    <p class="text-white/60 text-[9px]">Cahaya dewi</p>
+                </div>
+                <span class="text-white/60 text-[9px]">3:49</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <img src="3.png" class="w-8 h-8 rounded object-cover">
+                <div class="flex-1">
+                    <p class="text-white text-xs">Larana,inc.</p>
+                    <p class="text-white/60 text-[9px]">Ketut Susilo</p>
+                </div>
+                <span class="text-white/60 text-[9px]">1:29</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <img src="3.png" class="w-8 h-8 rounded object-cover">
+                <div class="flex-1">
+                    <p class="text-white text-xs">Rimberio</p>
+                    <p class="text-white/60 text-[9px]"></p>
+                </div>
+                <span class="text-white/60 text-[9px]">5:10</span>
+            </div>
         </div>
     </div>
 
@@ -151,28 +173,26 @@
     </div>
 
 
-    <!-- 🔹 TARJETA DE PASATIEMPOS: IMAGEN 3.png + LETRA PROFESIONAL -->
+    <!-- 🔹 TARJETA DE PASATIEMPOS -->
     <div class="absolute top-1/2 left-10 -translate-y-1/2 efecto-vidrio rounded-2xl p-5 w-full max-w-sm shadow-lg z-10">
         <h3 class="text-center text-base font-light mb-3">Pasatiempos</h3>
-        
         <div class="w-full h-36 rounded-xl mb-3 overflow-hidden border border-borde">
             <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
         </div>
-
         <p class="font-profesional font-light text-xs leading-relaxed text-white text-center">
             Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
         </p>
     </div>
 
 
-    <!-- 🔹 PALETA DE COLORES: FONDO DIFERENTE, AHORA SE DISTINGUE PERFECTO -->
+    <!-- 🔹 ✅ PALETA DE COLORES NUEVA (LOS 4 COLORES EXACTOS) -->
     <div class="absolute bottom-6 right-6 efecto-vidrio-oscuro rounded-2xl p-3 shadow-lg z-20">
         <p class="text-center text-[10px] mb-2 font-light">Paleta de colores usada</p>
         <div class="flex gap-0 rounded-lg overflow-hidden border border-borde/30">
-            <div class="w-14 h-9 bg-color1 flex flex-col items-center justify-center text-[9px] text-white font-mono">#1C4A3C</div>
-            <div class="w-14 h-9 bg-color2 flex flex-col items-center justify-center text-[9px] text-black font-mono">#85C254</div>
-            <div class="w-14 h-9 bg-color3 flex flex-col items-center justify-center text-[9px] text-black font-mono">#E8F3C2</div>
-            <div class="w-14 h-9 bg-color4 flex flex-col items-center justify-center text-[9px] text-black font-mono">#F8F8F5</div>
+            <div class="w-14 h-9 bg-color1 flex flex-col items-center justify-center text-[9px] text-white font-mono">#FF3333</div>
+            <div class="w-14 h-9 bg-color2 flex flex-col items-center justify-center text-[9px] text-white font-mono">#702963</div>
+            <div class="w-14 h-9 bg-color3 flex flex-col items-center justify-center text-[9px] text-black font-mono">#F9F871</div>
+            <div class="w-14 h-9 bg-color4 flex flex-col items-center justify-center text-[9px] text-white font-mono">#4B1E36</div>
         </div>
     </div>
 
