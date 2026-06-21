@@ -3,92 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Diseñador Gráfico</title>
+    <title>Joe Andre Villacres Guevara | Mercy - Diseño Gráfico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primario: '#165DFF',
-                        secundario: '#36CFC9',
-                        oscuro: '#1D2129',
-                        claro: '#F2F3F5'
+                        anime: {
+                            pink: '#FF2E88',
+                            blue: '#00F0FF',
+                            purple: '#8A2BE2',
+                            yellow: '#FFE600',
+                            dark: '#12042E',
+                            light: '#F8F0FF'
+                        }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        sans: ['Poppins', 'sans-serif'],
                     },
+                    boxShadow: {
+                        'neon-pink': '0 0 15px #FF2E88, 0 0 30px #FF2E8880',
+                        'neon-blue': '0 0 15px #00F0FF, 0 0 30px #00F0FF80',
+                        'neon-purple': '0 0 15px #8A2BE2, 0 0 30px #8A2BE280',
+                    }
                 }
             }
         }
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            .text-shadow-neon {
+                text-shadow: 0 0 8px currentColor, 0 0 15px currentColor;
             }
-            .card-hover {
-                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            .card-anime {
+                @apply transition-all duration-300 hover:scale-[1.03] hover:shadow-neon-blue;
+            }
+            .bg-gradient-anime {
+                background: linear-gradient(135deg, #12042E 0%, #2B0B5F 50%, #4B0082 100%);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(90deg, #FF2E88, #00F0FF, #FFE600);
             }
         }
     </style>
 </head>
-<body class="font-sans text-oscuro bg-white">
+<body class="font-sans text-anime-dark bg-anime-light overflow-x-hidden">
     <!-- Encabezado y Navegación -->
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <header class="fixed w-full bg-anime-dark/90 backdrop-blur-md z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-primario text-shadow">TuNombre</a>
+            <a href="#" class="text-2xl font-black text-anime-pink text-shadow-neon">Mercy</a>
             
             <!-- Navegación Escritorio -->
             <nav class="hidden md:flex gap-8">
-                <a href="#inicio" class="font-medium hover:text-primario transition-colors">Inicio</a>
-                <a href="#portafolio" class="font-medium hover:text-primario transition-colors">Portafolio</a>
-                <a href="#sobre-mi" class="font-medium hover:text-primario transition-colors">Sobre mí</a>
-                <a href="#servicios" class="font-medium hover:text-primario transition-colors">Servicios</a>
-                <a href="#contacto" class="font-medium hover:text-primario transition-colors">Contacto</a>
+                <a href="#inicio" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Inicio</a>
+                <a href="#portafolio" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Portafolio</a>
+                <a href="#sobre-mi" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Sobre mí</a>
+                <a href="#servicios" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Servicios</a>
+                <a href="#contacto" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Contacto</a>
             </nav>
 
             <!-- Botón menú móvil -->
-            <button id="menuBtn" class="md:hidden text-oscuro text-2xl">
+            <button id="menuBtn" class="md:hidden text-anime-blue text-2xl">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
 
         <!-- Menú móvil -->
-        <div id="menuMovil" class="hidden md:hidden bg-white shadow-md">
+        <div id="menuMovil" class="hidden md:hidden bg-anime-dark/95 shadow-md">
             <nav class="flex flex-col gap-3 p-4">
-                <a href="#inicio" class="font-medium py-2 hover:text-primario transition-colors">Inicio</a>
-                <a href="#portafolio" class="font-medium py-2 hover:text-primario transition-colors">Portafolio</a>
-                <a href="#sobre-mi" class="font-medium py-2 hover:text-primario transition-colors">Sobre mí</a>
-                <a href="#servicios" class="font-medium py-2 hover:text-primario transition-colors">Servicios</a>
-                <a href="#contacto" class="font-medium py-2 hover:text-primario transition-colors">Contacto</a>
+                <a href="#inicio" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Inicio</a>
+                <a href="#portafolio" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Portafolio</a>
+                <a href="#sobre-mi" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Sobre mí</a>
+                <a href="#servicios" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Servicios</a>
+                <a href="#contacto" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Contacto</a>
             </nav>
         </div>
     </header>
 
     <!-- Sección Inicio -->
-    <section id="inicio" class="min-h-screen flex items-center bg-gradient-to-br from-claro to-white pt-16">
-        <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
+    <section id="inicio" class="min-h-screen flex items-center bg-gradient-anime pt-16 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute w-40 h-40 rounded-full bg-anime-pink blur-3xl top-1/4 left-1/4"></div>
+            <div class="absolute w-60 h-60 rounded-full bg-anime-blue blur-3xl bottom-1/3 right-1/3"></div>
+            <div class="absolute w-32 h-32 rounded-full bg-anime-yellow blur-2xl top-1/2 right-1/4"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="order-2 md:order-1">
-                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-4">
-                    Diseño Gráfico <br> con propósito y estilo
+                <p class="text-anime-blue font-semibold text-lg mb-2">¡Hola! Soy</p>
+                <h1 class="text-[clamp(2.2rem,5vw,4rem)] font-black leading-none mb-3">
+                    <span class="text-anime-light">Joe Andre</span><br>
+                    <span class="text-gradient">Villacres Guevara</span>
                 </h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-xl">
-                    Creo identidades visuales, piezas publicitarias y diseños que conectan con tu audiencia y hacen crecer tu marca.
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-anime-purple text-shadow-neon mb-4">Conocido como Mercy</h2>
+                <p class="text-lg text-anime-light/90 mb-8 max-w-xl font-light">
+                    Diseñador gráfico con alma creativa, estilo anime y pasión por lo visual. Creo mundos, personajes y marcas que despiertan emociones y destacan con personalidad única.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#portafolio" class="bg-primario text-white px-8 py-3 rounded-lg font-medium hover:bg-primario/90 transition-colors shadow-lg hover:shadow-xl">
-                        Ver mi trabajo
+                    <a href="#portafolio" class="bg-anime-pink text-white px-8 py-3 rounded-lg font-bold hover:shadow-neon-pink transition-all transform hover:-translate-y-1">
+                        Ver Creaciones
                     </a>
-                    <a href="#contacto" class="border-2 border-primario text-primario px-8 py-3 rounded-lg font-medium hover:bg-primario/5 transition-colors">
-                        Contactarme
+                    <a href="#contacto" class="border-2 border-anime-blue text-anime-blue px-8 py-3 rounded-lg font-bold hover:bg-anime-blue/10 hover:shadow-neon-blue transition-all">
+                        Trabajemos Juntos
                     </a>
                 </div>
             </div>
             <div class="order-1 md:order-2 flex justify-center">
-                <div class="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-tr from-primario/20 to-secundario/20 flex items-center justify-center overflow-hidden shadow-2xl">
-                    <img src="https://picsum.photos/id/1012/400/400" alt="Diseñador Gráfico" class="w-[90%] h-[90%] object-cover rounded-full">
+                <div class="relative">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-anime-pink via-anime-blue to-anime-purple rounded-full blur-lg opacity-70 animate-pulse"></div>
+                    <div class="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden border-4 border-white relative">
+                        <img src="https://picsum.photos/id/22/400/400" alt="Joe Andre Villacres Guevara - Mercy" class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,30 +130,32 @@
     <!-- Sección Portafolio -->
     <section id="portafolio" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">Mi Portafolio</h2>
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4 text-anime-dark">Mi Galería Creativa</h2>
+            <p class="text-center text-anime-purple font-semibold mb-16">Estilo, color y magia visual en cada proyecto</p>
+            
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Proyecto 1 -->
-                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
-                    <img src="https://picsum.photos/id/1015/600/400" alt="Proyecto 1" class="w-full h-56 object-cover">
+                <div class="card-anime bg-anime-light rounded-xl overflow-hidden shadow-lg border-2 border-anime-pink/20">
+                    <img src="https://picsum.photos/id/1015/600/400" alt="Diseño de Personaje" class="w-full h-56 object-cover">
                     <div class="p-5">
-                        <h3 class="font-bold text-xl mb-2">Identidad Visual</h3>
-                        <p class="text-gray-600">Diseño de logotipo y sistema de marca para empresa de tecnología.</p>
+                        <h3 class="font-bold text-xl mb-2 text-anime-pink">Diseño de Personajes</h3>
+                        <p class="text-anime-dark/70">Creación de personajes originales con estética anime, diseños completos y hojas de referencia.</p>
                     </div>
                 </div>
                 <!-- Proyecto 2 -->
-                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
-                    <img src="https://picsum.photos/id/1019/600/400" alt="Proyecto 2" class="w-full h-56 object-cover">
+                <div class="card-anime bg-anime-light rounded-xl overflow-hidden shadow-lg border-2 border-anime-blue/20">
+                    <img src="https://picsum.photos/id/1019/600/400" alt="Identidad Visual" class="w-full h-56 object-cover">
                     <div class="p-5">
-                        <h3 class="font-bold text-xl mb-2">Diseño Editorial</h3>
-                        <p class="text-gray-600">Maquetación y diseño de revista corporativa y catálogos de producto.</p>
+                        <h3 class="font-bold text-xl mb-2 text-anime-blue">Identidad Visual</h3>
+                        <p class="text-anime-dark/70">Logotipos y marcas con estilo moderno y toques artísticos, únicos y memorables.</p>
                     </div>
                 </div>
                 <!-- Proyecto 3 -->
-                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
-                    <img src="https://picsum.photos/id/1021/600/400" alt="Proyecto 3" class="w-full h-56 object-cover">
+                <div class="card-anime bg-anime-light rounded-xl overflow-hidden shadow-lg border-2 border-anime-purple/20">
+                    <img src="https://picsum.photos/id/1021/600/400" alt="Ilustración Digital" class="w-full h-56 object-cover">
                     <div class="p-5">
-                        <h3 class="font-bold text-xl mb-2">Redes Sociales</h3>
-                        <p class="text-gray-600">Creación de contenido visual y plantillas para Instagram y Facebook.</p>
+                        <h3 class="font-bold text-xl mb-2 text-anime-purple">Ilustración Digital</h3>
+                        <p class="text-anime-dark/70">Arte digital, portadas, carteles y piezas gráficas llenas de color y narrativa visual.</p>
                     </div>
                 </div>
             </div>
@@ -128,23 +163,26 @@
     </section>
 
     <!-- Sección Sobre mí -->
-    <section id="sobre-mi" class="py-20 bg-claro">
+    <section id="sobre-mi" class="py-20 bg-anime-light/50">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <img src="https://picsum.photos/id/1027/500/600" alt="Sobre mí" class="rounded-xl shadow-xl w-full">
+            <div class="relative">
+                <div class="absolute -inset-3 bg-gradient-to-tr from-anime-purple/30 to-anime-pink/30 rounded-xl blur-md"></div>
+                <img src="https://picsum.photos/id/1027/500/600" alt="Sobre Mercy" class="rounded-xl shadow-xl w-full relative border-4 border-white">
             </div>
             <div>
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-6">Sobre mí</h2>
-                <p class="text-gray-700 mb-4 leading-relaxed">
-                    Soy diseñador gráfico con más de 5 años de experiencia ayudando a marcas a contar su historia a través del diseño. Me apasiona crear soluciones visuales que no solo se ven bien, sino que también funcionan estratégicamente.
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black mb-3 text-anime-dark">Sobre mí</h2>
+                <h3 class="text-xl font-bold text-anime-pink mb-4">Joe Andre Villacres Guevara | Mercy</h3>
+                <p class="text-anime-dark/80 mb-4 leading-relaxed text-lg">
+                    Soy diseñador gráfico e ilustrador con una gran pasión por la cultura pop, el anime y el arte visual. Para mí, diseñar es crear universos y dar vida a las ideas.
                 </p>
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                    Mi enfoque combina creatividad, investigación y tendencias actuales para entregar resultados de alta calidad. Domino herramientas como Adobe Illustrator, Photoshop, InDesign y After Effects.
+                <p class="text-anime-dark/80 mb-6 leading-relaxed">
+                    Me especializo en estilos vibrantes, líneas definidas y composiciones que cuentan historias. Domino herramientas como Adobe Illustrator, Photoshop, Clip Studio Paint y Blender. Mi objetivo es que cada proyecto tenga alma y estilo propio.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#" class="text-2xl text-oscuro hover:text-primario transition-colors"><i class="fa fa-behance"></i></a>
-                    <a href="#" class="text-2xl text-oscuro hover:text-primario transition-colors"><i class="fa fa-dribbble"></i></a>
-                    <a href="#" class="text-2xl text-oscuro hover:text-primario transition-colors"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-behance"></i></a>
+                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-dribbble"></i></a>
+                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -153,49 +191,51 @@
     <!-- Sección Servicios -->
     <section id="servicios" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">Mis Servicios</h2>
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-16 text-anime-dark">Mis Servicios Creativos</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card-hover p-8 bg-claro rounded-xl text-center">
-                    <i class="fa fa-paint-brush text-4xl text-primario mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Identidad de Marca</h3>
-                    <p class="text-gray-600">Logotipos, manuales de marca, paletas de colores y tipografías únicas.</p>
+                <div class="card-anime p-8 bg-gradient-to-b from-anime-pink/5 to-anime-pink/20 rounded-xl text-center border-b-4 border-anime-pink">
+                    <i class="fa fa-paint-brush text-4xl text-anime-pink mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Ilustración & Arte</h3>
+                    <p class="text-anime-dark/70">Diseño de personajes, fondos, ilustraciones para libros, juegos o redes sociales con estilo anime y original.</p>
                 </div>
-                <div class="card-hover p-8 bg-claro rounded-xl text-center">
-                    <i class="fa fa-file-image-o text-4xl text-primario mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Diseño Publicitario</h3>
-                    <p class="text-gray-600">Carteles, volantes, banners, anuncios digitales y piezas para impresión.</p>
+                <div class="card-anime p-8 bg-gradient-to-b from-anime-blue/5 to-anime-blue/20 rounded-xl text-center border-b-4 border-anime-blue">
+                    <i class="fa fa-palette text-4xl text-anime-blue mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Diseño de Marca</h3>
+                    <p class="text-anime-dark/70">Creación de identidad visual, logotipos y manuales de marca con personalidad y estilo único.</p>
                 </div>
-                <div class="card-hover p-8 bg-claro rounded-xl text-center">
-                    <i class="fa fa-mobile-phone text-4xl text-primario mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Contenido Digital</h3>
-                    <p class="text-gray-600">Diseño para redes sociales, ilustraciones, edición de imagen y maquetación web.</p>
+                <div class="card-anime p-8 bg-gradient-to-b from-anime-purple/5 to-anime-purple/20 rounded-xl text-center border-b-4 border-anime-purple">
+                    <i class="fa fa-magic text-4xl text-anime-purple mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Contenido Visual</h3>
+                    <p class="text-anime-dark/70">Diseño para redes sociales, carteles, portadas y material publicitario que llama la atención.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contacto" class="py-20 bg-gradient-to-br from-claro to-white">
+    <section id="contacto" class="py-20 bg-gradient-anime text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">Contacto</h2>
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4">¿Tienes una idea?</h2>
+            <p class="text-center text-anime-blue font-semibold mb-16">¡Hagámosla realidad con estilo!</p>
+            
+            <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20">
                 <form>
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
-                            <label class="block text-gray-700 mb-2">Nombre</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primario">
+                            <label class="block text-anime-yellow mb-2 font-semibold">Nombre</label>
+                            <input type="text" class="w-full px-4 py-3 bg-white/20 border border-anime-blue/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-anime-yellow text-white placeholder:text-white/70">
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2">Correo electrónico</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primario">
+                            <label class="block text-anime-yellow mb-2 font-semibold">Correo electrónico</label>
+                            <input type="email" class="w-full px-4 py-3 bg-white/20 border border-anime-blue/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-anime-yellow text-white placeholder:text-white/70">
                         </div>
                     </div>
                     <div class="mb-6">
-                        <label class="block text-gray-700 mb-2">Mensaje</label>
-                        <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primario"></textarea>
+                        <label class="block text-anime-yellow mb-2 font-semibold">Mensaje</label>
+                        <textarea rows="5" class="w-full px-4 py-3 bg-white/20 border border-anime-blue/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-anime-yellow text-white placeholder:text-white/70"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-primario text-white py-3 rounded-lg font-medium hover:bg-primario/90 transition-colors shadow-md">
-                        Enviar mensaje
+                    <button type="submit" class="w-full bg-gradient-to-r from-anime-pink to-anime-purple text-white py-3 rounded-lg font-bold hover:shadow-neon-pink transition-all transform hover:-translate-y-1">
+                        Enviar Mensaje
                     </button>
                 </form>
             </div>
@@ -203,8 +243,9 @@
     </section>
 
     <!-- Pie de página -->
-    <footer class="bg-oscuro text-white py-8 text-center">
-        <p>&copy; 2026 TuNombre - Diseñador Gráfico. Todos los derechos reservados.</p>
+    <footer class="bg-anime-dark text-anime-light py-8 text-center border-t-2 border-anime-pink/30">
+        <p class="text-lg font-semibold">© 2026 Joe Andre Villacres Guevara — <span class="text-anime-pink font-bold text-shadow-neon">Mercy</span></p>
+        <p class="text-sm text-anime-light/60 mt-1">Diseñador Gráfico & Ilustrador | Hecho con ❤️ y estilo anime</p>
     </footer>
 
     <!-- Script para menú móvil -->
