@@ -9,7 +9,13 @@
     <script>
         tailwind.config = {
             theme: {
-                extend: {}
+                extend: {
+                    colors: {
+                        cristal: 'rgba(255, 255, 255, 0.12)',
+                        borde: 'rgba(255, 255, 255, 0.2)',
+                        texto: '#ffffff'
+                    }
+                }
             }
         }
     </script>
@@ -21,12 +27,46 @@
                 background-position: center;
                 background-repeat: no-repeat;
             }
+            .efecto-vidrio {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+            }
         }
     </style>
 </head>
-<body class="fondo-imagen text-white min-h-screen font-sans">
+<body class="fondo-imagen text-texto min-h-screen font-sans flex items-center justify-center p-4">
 
-    <!-- Página en blanco, imagen de fondo cargada como 1.png -->
+    <!-- Tarjeta con el efecto que pediste -->
+    <div class="efecto-vidrio rounded-2xl p-6 w-full max-w-md shadow-lg">
+        <div class="flex items-center gap-4 mb-3">
+            <!-- Foto de perfil -->
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-borde">
+                <img src="perfil.png" alt="Tu foto" class="w-full h-full object-cover">
+            </div>
+            <!-- Nombre y cargo -->
+            <div>
+                <h3 class="font-semibold text-lg">Joe Andre Villacres Guevara</h3>
+                <p class="text-sm text-white/80">Comunicador Digital · Diseñador</p>
+            </div>
+        </div>
+
+        <!-- Descripción -->
+        <p class="text-sm leading-relaxed mb-4 text-white/90">
+            Diseñando porque me encanta resolver problemas y hacer que las cosas sean sencillas. Comparto mi camino en diseño, páginas web y creatividad con inteligencia artificial.
+        </p>
+
+        <!-- Botones -->
+        <div class="flex gap-3">
+            <button class="px-5 py-2 rounded-lg bg-cristal border border-borde hover:bg-white/20 transition text-sm">
+                Seguir
+            </button>
+            <button class="px-5 py-2 rounded-lg bg-cristal border border-borde hover:bg-white/20 transition text-sm">
+                Mensajes
+            </button>
+        </div>
+    </div>
 
 </body>
 </html>
