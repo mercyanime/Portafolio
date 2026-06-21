@@ -20,7 +20,7 @@
                         cuadro2: '#5B42D3',
                         cuadro3: '#E91E63',
                         cuadro4: '#00B498',
-                        // ✅ PALETA DE COLORES INSTAGRAM
+                        // Colores Instagram
                         ig_rosa: '#E1306C',
                         ig_morado: '#C13584',
                         ig_naranja: '#F56040',
@@ -55,7 +55,7 @@
                 -webkit-backdrop-filter: blur(10px);
                 border: 1px solid rgba(255, 255, 255, 0.2);
             }
-            /* Estilo: Perfil vidrio neón exacto a la imagen */
+            /* Estilo: Perfil vidrio neón */
             .perfil-neon {
                 background: rgba(255, 255, 255, 0.05);
                 backdrop-filter: blur(20px);
@@ -109,10 +109,50 @@
     </div>
 
 
-    <!-- 🔹 ✅ PANTALLA NUEVA: PERFIL VIDRIO NEÓN (EXACTO A TU IMAGEN) -->
-    <div class="absolute top-[12%] left-1/2 -translate-x-1/2 perfil-neon w-[360px] h-[620px] p-5 z-50">
+    <!-- 🔹 CONTENEDOR: PASATIEMPOS + EXPERIENCIA (LADO A LADO) -->
+    <div class="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-6 z-10">
+        
+        <!-- Tarjeta Pasatiempos -->
+        <div class="efecto-vidrio rounded-2xl p-5 w-full max-w-xs shadow-lg">
+            <h3 class="text-center text-base font-light mb-3">Pasatiempos</h3>
+            <div class="w-full h-36 rounded-xl mb-3 overflow-hidden border border-borde">
+                <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
+            </div>
+            <p class="font-profesional font-light text-xs leading-relaxed text-white text-center">
+                Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
+            </p>
+        </div>
+
+        <!-- Tarjeta Experiencia -->
+        <div class="efecto-vidrio rounded-2xl p-5 w-full max-w-xs shadow-lg">
+            <h3 class="text-center text-base font-light mb-4 texto-neon">Experiencia</h3>
+            <ul class="space-y-3 text-white/90 text-sm">
+                <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-briefcase text-ig_rosa mt-1"></i>
+                    <span><strong>8 años</strong> en atención al cliente</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-building text-ig_morado mt-1"></i>
+                    <span><strong>2 años</strong> en COOPERATIVA TOURIS SAN FRANCISCO</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-truck text-ig_naranja mt-1"></i>
+                    <span><strong>1 año</strong> en AGEEPCOURIER ECUADOR S.A</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-gamepad text-ig_amarillo mt-1"></i>
+                    <span><strong>6 MESES</strong> EN HOUSE GAMING CYBER</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- 🔹 ✅ PANTALLA INSTAGRAM: AHORA ABAJO A LA DERECHA (DONDE ESTABA LA PALETA) -->
+    <div class="absolute bottom-6 right-6 perfil-neon w-[320px] h-[520px] p-4 z-50">
         <!-- Encabezado -->
-        <div class="flex justify-between items-center mb-4">
+        <div class="flex justify-between items-center mb-3">
             <i class="fa-solid fa-plus text-white text-lg"></i>
             <span class="texto-neon font-semibold text-lg">joeandremerecy</span>
             <div class="flex gap-3">
@@ -122,8 +162,8 @@
         </div>
 
         <!-- Datos perfil -->
-        <div class="flex items-center gap-3 mb-4">
-            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-pink-500/50">
+        <div class="flex items-center gap-3 mb-3">
+            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-pink-500/50">
                 <img src="2.png" class="w-full h-full object-cover">
             </div>
             <div class="flex-1">
@@ -137,21 +177,21 @@
         </div>
 
         <!-- Botones -->
-        <div class="flex gap-2 mb-5">
+        <div class="flex gap-2 mb-4">
             <button class="flex-1 bg-white/10 rounded-lg py-2 text-xs">Editar perfil</button>
             <button class="flex-1 bg-white/10 rounded-lg py-2 text-xs">Ver archivo</button>
         </div>
 
         <!-- Nueva historia -->
-        <div class="flex flex-col items-center mb-5">
-            <div class="w-12 h-12 rounded-full border-2 border-dashed border-white/40 flex items-center justify-center mb-1">
+        <div class="flex flex-col items-center mb-4">
+            <div class="w-10 h-10 rounded-full border-2 border-dashed border-white/40 flex items-center justify-center mb-1">
                 <i class="fa-solid fa-plus text-white/60"></i>
             </div>
             <span class="text-[10px] text-white/70">Nueva</span>
         </div>
 
         <!-- Iconos navegación -->
-        <div class="flex justify-around text-white/70 mb-4 border-b border-white/10 pb-2">
+        <div class="flex justify-around text-white/70 mb-3 border-b border-white/10 pb-2">
             <i class="fa-solid fa-table-cells text-white text-lg"></i>
             <i class="fa-regular fa-bookmark text-lg"></i>
             <i class="fa-solid fa-arrows-rotate text-lg"></i>
@@ -159,69 +199,20 @@
         </div>
 
         <!-- Mensaje vacío -->
-        <div class="text-center py-6">
-            <i class="fa-solid fa-camera text-white/20 text-4xl mb-2"></i>
-            <p class="font-light text-base">Comparte fotos</p>
-            <p class="text-[11px] text-white/60 mt-1">Cuando compartas fotos, aparecerán en tu perfil.</p>
-            <a href="#" class="text-[11px] text-blue-400 mt-2 inline-block">Compartir tu primera foto</a>
+        <div class="text-center py-4">
+            <i class="fa-solid fa-camera text-white/20 text-3xl mb-2"></i>
+            <p class="font-light text-sm">Comparte fotos</p>
+            <p class="text-[10px] text-white/60 mt-1">Cuando compartas fotos, aparecerán en tu perfil.</p>
+            <a href="#" class="text-[10px] text-blue-400 mt-2 inline-block">Compartir tu primera foto</a>
         </div>
 
         <!-- Navegación inferior -->
-        <div class="absolute bottom-4 left-0 w-full flex justify-around text-white/70 px-6">
+        <div class="absolute bottom-3 left-0 w-full flex justify-around text-white/70 px-4">
             <i class="fa-solid fa-house text-white text-lg"></i>
             <i class="fa-brands fa-instagram text-lg"></i>
             <i class="fa-solid fa-paper-plane text-lg"></i>
             <i class="fa-solid fa-magnifying-glass text-lg"></i>
             <i class="fa-regular fa-circle-user text-lg"></i>
-        </div>
-    </div>
-
-
-    <!-- 🔹 TARJETA DE PASATIEMPOS -->
-    <div class="absolute top-[65%] left-6 -translate-y-1/2 efecto-vidrio rounded-2xl p-5 w-full max-w-xs shadow-lg z-10">
-        <h3 class="text-center text-base font-light mb-3">Pasatiempos</h3>
-        <div class="w-full h-36 rounded-xl mb-3 overflow-hidden border border-borde">
-            <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
-        </div>
-        <p class="font-profesional font-light text-xs leading-relaxed text-white text-center">
-            Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
-        </p>
-    </div>
-
-
-    <!-- 🔹 ✅ NUEVA TARJETA: EXPERIENCIA LABORAL -->
-    <div class="absolute top-[65%] right-6 -translate-y-1/2 efecto-vidrio rounded-2xl p-5 w-full max-w-xs shadow-lg z-10">
-        <h3 class="text-center text-base font-light mb-4 texto-neon">Experiencia</h3>
-        <ul class="space-y-3 text-white/90 text-sm">
-            <li class="flex items-start gap-2">
-                <i class="fa-solid fa-briefcase text-ig_rosa mt-1"></i>
-                <span><strong>8 años</strong> en atención al cliente</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <i class="fa-solid fa-building text-ig_morado mt-1"></i>
-                <span><strong>2 años</strong> en COOPERATIVA TOURIS SAN FRANCISCO</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <i class="fa-solid fa-truck text-ig_naranja mt-1"></i>
-                <span><strong>1 año</strong> en AGEEPCOURIER ECUADOR S.A</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <i class="fa-solid fa-gamepad text-ig_amarillo mt-1"></i>
-                <span><strong>6 MESES</strong> EN HOUSE GAMING CYBER</span>
-            </li>
-        </ul>
-    </div>
-
-
-    <!-- 🔹 ✅ PALETA DE COLORES INSTAGRAM -->
-    <div class="absolute bottom-6 right-6 efecto-vidrio rounded-2xl p-2 shadow-lg z-20">
-        <p class="text-center text-[9px] mb-1 font-light">Paleta Instagram</p>
-        <div class="flex gap-0 rounded-lg overflow-hidden">
-            <div class="w-11 h-8 bg-ig_rosa flex flex-col items-center justify-center text-[8px] text-white font-mono">#E1306C</div>
-            <div class="w-11 h-8 bg-ig_morado flex flex-col items-center justify-center text-[8px] text-white font-mono">#C13584</div>
-            <div class="w-11 h-8 bg-ig_naranja flex flex-col items-center justify-center text-[8px] text-white font-mono">#F56040</div>
-            <div class="w-11 h-8 bg-ig_amarillo flex flex-col items-center justify-center text-[8px] text-black font-mono">#FFDC80</div>
-            <div class="w-11 h-8 bg-ig_rojo flex flex-col items-center justify-center text-[8px] text-white font-mono">#FD1D1D</div>
         </div>
     </div>
 
