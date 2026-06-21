@@ -19,7 +19,12 @@
                         tarjeta3: '#009EDC',
                         tarjeta4: '#30B877',
                         tarjeta5: '#FBC200',
-                        gris: '#888892'
+                        icono1: '#3478F6',
+                        icono2: '#9C27B0',
+                        icono3: '#009688',
+                        icono4: '#FF9800',
+                        icono5: '#E91E63',
+                        icono6: '#4CAF50',
                     },
                     fontFamily: {
                         cursiva: ['"Dancing Script"', 'cursive', 'sans-serif'],
@@ -45,16 +50,19 @@
                 border: 1px solid rgba(255, 255, 255, 0.18);
             }
 
-            /* Estilos de las tarjetas */
+            /* Estilos de tarjetas */
             .sombra-tarjeta {
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+            .icono-estilo {
+                @apply w-12 h-12 rounded-2xl flex items-center justify-center text-white text-lg font-bold;
             }
         }
     </style>
 </head>
 <body class="fondo-imagen text-texto min-h-screen font-sans p-6">
 
-    <!-- 🔹 LO ANTERIOR: Tarjeta arriba a la izquierda -->
+    <!-- 🔹 TU TARJETA DE PERFIL (SE QUEDA IGUAL) -->
     <div class="efecto-vidrio rounded-2xl p-6 w-full max-w-md shadow-lg mb-16">
         <div class="flex items-center gap-4 mb-3">
             <!-- Foto de perfil: 2.png -->
@@ -75,50 +83,72 @@
     </div>
 
 
-    <!-- 🔹 LO NUEVO: Solo las tarjetas, SIN fondo oscuro -->
-    <div class="w-full max-w-6xl mx-auto font-poppins">
-        
-        <!-- Encabezado -->
-        <div class="text-center mb-12">
-            <span class="text-gris text-sm bg-white/10 px-4 py-1 rounded-full inline-block mb-2">⭐ 5 Meses - Acceso Libre</span>
-            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-texto leading-tight">
-                Fun Games<br>Nintendo Switch
-            </h2>
-            <p class="text-gris text-sm mt-3 max-w-lg mx-auto">
-                Be sure to try our selection of games, we have carefully chosen them. There are games for all tastes.
-            </p>
-        </div>
-
-        <!-- Contenedor de tarjetas -->
+    <!-- 🔹 SOLO LOS CUADROS DE LAS TARJETAS (SIN NINGÚN TEXTO ARRIBA) -->
+    <div class="w-full max-w-6xl mx-auto font-poppins mb-20">
         <div class="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 items-end">
 
             <!-- Tarjeta 1 -->
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta1 rounded-2xl sombra-tarjeta relative overflow-hidden">
-                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.5</div>
-            </div>
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta1 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
 
             <!-- Tarjeta 2 -->
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta2 rounded-2xl sombra-tarjeta relative overflow-hidden">
-                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.6</div>
-            </div>
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta2 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
 
             <!-- Tarjeta 3 (central, más alta) -->
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[280px] bg-tarjeta3 rounded-2xl sombra-tarjeta relative overflow-hidden scale-105 z-10">
-                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.7</div>
-            </div>
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[280px] bg-tarjeta3 rounded-2xl sombra-tarjeta relative overflow-hidden scale-105 z-10"></div>
 
             <!-- Tarjeta 4 -->
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta4 rounded-2xl sombra-tarjeta relative overflow-hidden">
-                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.2</div>
-            </div>
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta4 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
 
             <!-- Tarjeta 5 -->
-            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta5 rounded-2xl sombra-tarjeta relative overflow-hidden">
-                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">3.9</div>
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta5 rounded-2xl sombra-tarjeta relative overflow-hidden"></div>
+
+        </div>
+    </div>
+
+
+    <!-- 🔹 NUEVA TARJETA PEQUEÑA CON TUS PROGRAMAS -->
+    <div class="efecto-vidrio rounded-2xl p-6 w-full max-w-lg mx-auto shadow-lg">
+        <h3 class="text-center text-lg font-semibold mb-5">Mis Servicios y Herramientas</h3>
+        
+        <div class="grid grid-cols-3 gap-4 text-center">
+            
+            <!-- Adobe Illustrador -->
+            <div class="flex flex-col items-center gap-2">
+                <div class="icono-estilo bg-icono1">Ai</div>
+                <span class="text-xs">Adobe Illustrador</span>
+            </div>
+
+            <!-- Inteligencia Artificial -->
+            <div class="flex flex-col items-center gap-2">
+                <div class="icono-estilo bg-icono2">IA</div>
+                <span class="text-xs">Inteligencia Artificial</span>
+            </div>
+
+            <!-- Trabajos estudiantiles -->
+            <div class="flex flex-col items-center gap-2">
+                <div class="icono-estilo bg-icono3">📚</div>
+                <span class="text-xs">Trabajos estudiantiles</span>
+            </div>
+
+            <!-- Hojas de vida -->
+            <div class="flex flex-col items-center gap-2">
+                <div class="icono-estilo bg-icono4">📄</div>
+                <span class="text-xs">Hojas de vida</span>
+            </div>
+
+            <!-- Páginas web -->
+            <div class="flex flex-col items-center gap-2">
+                <div class="icono-estilo bg-icono5">🌐</div>
+                <span class="text-xs">Páginas web</span>
+            </div>
+
+            <!-- Vectorización -->
+            <div class="flex flex-col items-center gap-2">
+                <div class="icono-estilo bg-icono6">✏️</div>
+                <span class="text-xs">Vectorización</span>
             </div>
 
         </div>
-
     </div>
 
 </body>
