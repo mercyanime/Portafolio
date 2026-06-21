@@ -87,6 +87,18 @@
                 background-clip: text;
                 color: transparent;
             }
+            .icono-circular {
+                border-radius: 50% !important;
+            }
+            .cuadro-vacio {
+                border: 1px dashed rgba(255,255,255,0.3);
+                border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgba(255,255,255,0.4);
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -145,14 +157,14 @@
     </div>
 
 
-    <!-- 🔹 EXPERIENCIA (ICONOS) - AHORA CON IMÁGENES SEPARADAS -->
-    <div class="efecto-vidrio-azul p-4 w-[380px] z-30 absolute bottom-10 left-6">
+    <!-- 🔹 EXPERIENCIA (ICONOS CIRCULARES + CUADROS VACÍOS) -->
+    <div class="efecto-vidrio-azul p-4 w-[420px] z-30 absolute bottom-10 left-6">
         <h3 class="text-center text-xs font-medium mb-4 text-cyan-300">Experiencia</h3>
-        <div class="grid grid-cols-4 gap-3 justify-items-center">
+        <div class="grid grid-cols-4 gap-4 justify-items-center">
             
             <!-- Adobe Illustrator -->
             <div class="flex flex-col items-center">
-                <img src="ai.png" alt="Illustrator" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+                <img src="ai.png" alt="Illustrator" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -161,7 +173,7 @@
 
             <!-- Inteligencia Artificial -->
             <div class="flex flex-col items-center">
-                <img src="ia.png" alt="Inteligencia Artificial" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+                <img src="ia.png" alt="Inteligencia Artificial" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
@@ -170,7 +182,7 @@
 
             <!-- CapCut -->
             <div class="flex flex-col items-center">
-                <img src="capcut.png" alt="CapCut" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+                <img src="capcut.png" alt="CapCut" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
@@ -179,7 +191,7 @@
 
             <!-- OBS Studio -->
             <div class="flex flex-col items-center">
-                <img src="obs.png" alt="OBS Studio" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+                <img src="obs.png" alt="OBS Studio" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -188,7 +200,7 @@
 
             <!-- Polarr -->
             <div class="flex flex-col items-center">
-                <img src="polarr.png" alt="Polarr" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+                <img src="polarr.png" alt="Polarr" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -197,7 +209,7 @@
 
             <!-- Canva -->
             <div class="flex flex-col items-center">
-                <img src="canva.png" alt="Canva" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+                <img src="canva.png" alt="Canva" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
@@ -205,12 +217,52 @@
             </div>
 
             <!-- GitHub -->
-            <div class="flex flex-col items-center col-span-2">
-                <img src="github.png" alt="GitHub" class="w-10 h-10 rounded-md border border-borde_vidrio mb-1 object-contain">
+            <div class="flex flex-col items-center">
+                <img src="github.png" alt="GitHub" class="w-12 h-12 icono-circular border border-borde_vidrio mb-1 object-contain">
                 <div class="flex gap-0.5 text-yellow-400 text-[7px] mb-1">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
                 <span class="text-[8px] text-center">GitHub</span>
+            </div>
+
+            <!-- CUADRO VACÍO 1 -->
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-12 cuadro-vacio mb-1">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-[8px] text-center opacity-50">Trabajo</span>
+            </div>
+
+            <!-- CUADRO VACÍO 2 -->
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-12 cuadro-vacio mb-1">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-[8px] text-center opacity-50">Trabajo</span>
+            </div>
+
+            <!-- CUADRO VACÍO 3 -->
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-12 cuadro-vacio mb-1">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-[8px] text-center opacity-50">Trabajo</span>
+            </div>
+
+            <!-- CUADRO VACÍO 4 -->
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-12 cuadro-vacio mb-1">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-[8px] text-center opacity-50">Trabajo</span>
+            </div>
+
+            <!-- CUADRO VACÍO 5 -->
+            <div class="flex flex-col items-center">
+                <div class="w-12 h-12 cuadro-vacio mb-1">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <span class="text-[8px] text-center opacity-50">Trabajo</span>
             </div>
 
         </div>
