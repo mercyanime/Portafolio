@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Andre Villacres Guevara | Mercy - Portafolio</title>
+    <title>Joe Andre Villacres Guevara | Mercy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        principal: '#7B2CBF',
-                        rosa: '#FF2E88',
-                        oscuro: '#1A0033',
-                        medio: '#3C096C',
-                        claro: '#E0AAFF',
-                        soft: '#F8E5FF'
+                        oscuro: '#0F051E',
+                        morado: '#4B2E7A',
+                        rosa: '#FF4A6E',
+                        rojo: '#FF2E4C',
+                        transparente: 'rgba(15, 5, 30, 0.45)',
+                        marco: 'rgba(130, 160, 255, 0.6)'
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'neon': '0 0 12px #FF2E88, 0 0 24px #7B2CBF80',
                     }
                 }
             }
@@ -33,289 +27,89 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow-neon {
-                text-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
+            .fondo-imagen {
+                background-image: url('https://i.imgur.com/7xQZ8yL.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
-            .card-style {
-                @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-neon;
+            .caja-transparente {
+                background-color: rgba(15, 5, 30, 0.5);
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
             }
-            .bg-gradient-principal {
-                background: linear-gradient(135deg, #1A0033 0%, #3C096C 50%, #7B2CBF 100%);
-            }
-            .text-gradient {
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                background-image: linear-gradient(90deg, #FF2E88, #E0AAFF);
-            }
-            .barra-superior {
-                @apply bg-oscuro/80 backdrop-blur-md border-b border-rosa/20;
-            }
-            .barra-secundaria {
-                @apply bg-medio/60 backdrop-blur-sm border-b border-claro/20;
+            .marco-boton {
+                border: 1px solid rgba(130, 160, 255, 0.7);
+                background-color: rgba(75, 46, 122, 0.3);
             }
         }
     </style>
 </head>
-<body class="font-sans text-white bg-gradient-principal min-h-screen">
+<body class="fondo-imagen min-h-screen font-sans text-white flex flex-col justify-between p-4 md:p-8">
 
-    <!-- 🟣 BARRA DE NAVEGACIÓN PRINCIPAL -->
-    <header class="barra-superior fixed w-full z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-black text-rosa text-shadow-neon">Mercy</a>
-            
-            <!-- Navegación Principal -->
-            <nav class="hidden md:flex gap-10">
-                <a href="#inicio" class="font-semibold text-claro hover:text-rosa transition-all">Inicio</a>
-                <a href="#mis-disenos" class="font-semibold text-claro hover:text-rosa transition-all">Mis Diseños</a>
-                <a href="#habilidades" class="font-semibold text-claro hover:text-rosa transition-all">Habilidades</a>
-                <a href="#sobre-mi" class="font-semibold text-claro hover:text-rosa transition-all">Sobre mí</a>
-            </nav>
+    <!-- Menú Superior -->
+    <div class="marco-boton rounded-md px-4 py-2 inline-block mb-8">
+        <nav class="flex gap-4 md:gap-6 text-sm md:text-base">
+            <a href="#" class="text-white hover:text-rosa transition">INICIO</a>
+            <a href="#" class="text-white hover:text-rosa transition">DISEÑOS</a>
+            <a href="#" class="text-white hover:text-rosa transition">HABILIDADES</a>
+            <a href="#" class="text-white hover:text-rosa transition">SOBRE MI</a>
+        </nav>
+    </div>
 
-            <button id="menuBtn" class="md:hidden text-rosa text-2xl">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- 🟣 BARRA DE NAVEGACIÓN SECUNDARIA (tal como pediste) -->
-        <div class="barra-secundaria">
-            <div class="container mx-auto px-4 py-2 flex flex-wrap gap-8 justify-center md:justify-start">
-                <a href="#ilustrador" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
-                    <i class="fa fa-paint-brush"></i> Adobe Illustrator
-                </a>
-                <a href="#ia" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
-                    <i class="fa fa-cogs"></i> IA
-                </a>
-                <a href="#web" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
-                    <i class="fa fa-code"></i> Diseño Web Básico
-                </a>
-                <a href="#instagram" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
-                    <i class="fa fa-instagram"></i> Instagram
-                </a>
-                <a href="#tiktok" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
-                    <i class="fa fa-music"></i> TikTok
-                </a>
-            </div>
-        </div>
-
-        <!-- Menú móvil -->
-        <div id="menuMovil" class="hidden md:hidden bg-oscuro/95">
-            <nav class="flex flex-col gap-2 p-4">
-                <a href="#inicio" class="py-2 text-claro hover:text-rosa">Inicio</a>
-                <a href="#mis-disenos" class="py-2 text-claro hover:text-rosa">Mis Diseños</a>
-                <a href="#habilidades" class="py-2 text-claro hover:text-rosa">Habilidades</a>
-                <a href="#sobre-mi" class="py-2 text-claro hover:text-rosa">Sobre mí</a>
-                <div class="border-t border-claro/20 pt-2 mt-2">
-                    <a href="#ilustrador" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-paint-brush"></i> Illustrator</a>
-                    <a href="#ia" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-cogs"></i> IA</a>
-                    <a href="#web" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-code"></i> Web</a>
-                    <a href="#instagram" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-instagram"></i> Instagram</a>
-                    <a href="#tiktok" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-music"></i> TikTok</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- SECCIÓN INICIO -->
-    <section id="inicio" class="min-h-screen flex items-center pt-28 pb-16 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-20">
-            <div class="absolute w-60 h-60 rounded-full bg-rosa blur-3xl top-1/3 left-1/4"></div>
-            <div class="absolute w-80 h-80 rounded-full bg-principal blur-3xl bottom-1/4 right-1/4"></div>
-        </div>
+    <!-- Contenido Principal -->
+    <div class="flex flex-col md:flex-row items-start justify-between w-full gap-8">
         
-        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="order-2 md:order-1">
-                <p class="text-claro font-semibold text-lg mb-2">¡Hola! Soy</p>
-                <h1 class="text-[clamp(2rem,5vw,3.8rem)] font-black leading-tight mb-3">
-                    <span class="text-white">Joe Andre</span><br>
-                    <span class="text-gradient">Villacres Guevara</span>
-                </h1>
-                <h2 class="text-[clamp(1.3rem,3vw,2.2rem)] font-bold text-rosa text-shadow-neon mb-4">Conocido como Mercy</h2>
-                <p class="text-lg text-soft/90 mb-8 max-w-xl">
-                    Diseñador gráfico & ilustrador con estilo anime, creatividad y pasión por lo visual. Creo diseños únicos, arte digital y contenido que destaca.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#mis-disenos" class="bg-rosa text-white px-8 py-3 rounded-lg font-bold hover:shadow-neon transition-all transform hover:-translate-y-1">
-                        Ver Mis Diseños
-                    </a>
-                    <a href="#contacto" class="border-2 border-claro text-claro px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all">
-                        Contactarme
-                    </a>
-                </div>
+        <!-- Caja de texto Sobre mí -->
+        <div class="caja-transparente rounded-lg p-6 w-full md:w-2/3 max-w-lg relative">
+            <div class="absolute -left-2 top-6 flex flex-col gap-2">
+                <div class="w-2 h-2 rounded-full bg-rojo/60"></div>
+                <div class="w-2 h-2 rounded-full bg-rojo/60"></div>
+                <div class="w-2 h-2 rounded-full bg-rojo/60"></div>
             </div>
-            <div class="order-1 md:order-2 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-2 bg-gradient-to-r from-rosa via-principal to-medio rounded-full blur-lg opacity-70 animate-pulse"></div>
-                    <div class="w-[260px] h-[260px] md:w-[340px] md:h-[340px] rounded-full overflow-hidden border-4 border-white/80 relative">
-                        <img src="https://picsum.photos/id/22/400/400" alt="Joe Andre Villacres Guevara - Mercy" class="w-full h-full object-cover">
-                    </div>
-                </div>
+
+            <h2 class="text-lg font-semibold mb-3">SOBRE MI</h2>
+            <p class="text-sm leading-relaxed">
+                Soy Joe Andre Villacres Guevara (Mercy) mis habilidades son nivel intermedio, comunicador digital en publicidad, me desempeño mejor en diseño de banners y paginas web con ayuda de la inteligencia artificial.
+            </p>
+
+            <div class="absolute -right-2 bottom-6 flex flex-col gap-2">
+                <div class="w-2 h-2 rounded-full bg-rojo/60"></div>
+                <div class="w-2 h-2 rounded-full bg-rojo/60"></div>
+                <div class="w-2 h-2 rounded-full bg-rojo/60"></div>
             </div>
         </div>
-    </section>
 
-    <!-- SECCIÓN: MIS DISEÑOS -->
-    <section id="mis-disenos" class="py-20 bg-white/5 backdrop-blur-sm">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4 text-white">Mis Diseños</h2>
-            <p class="text-center text-claro font-semibold mb-16">Ilustraciones, arte digital y creaciones originales</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                
-                <!-- Bloque de diseño (copia este para agregar más) -->
-                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-rosa/30">
-                    <img src="https://picsum.photos/id/1015/600/600" alt="Diseño 1" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="p-5 w-full">
-                            <h3 class="text-white font-bold text-xl">Ilustración Anime</h3>
-                            <p class="text-claro text-sm">Creación propia • Mercy</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-principal/30">
-                    <img src="https://picsum.photos/id/1019/600/600" alt="Diseño 2" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="p-5 w-full">
-                            <h3 class="text-white font-bold text-xl">Diseño de Marca</h3>
-                            <p class="text-claro text-sm">Identidad Visual • Mercy</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-rosa/30">
-                    <img src="https://picsum.photos/id/1021/600/600" alt="Diseño 3" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="p-5 w-full">
-                            <h3 class="text-white font-bold text-xl">Arte Digital</h3>
-                            <p class="text-claro text-sm">Ilustración • Mercy</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-principal/30">
-                    <img src="https://picsum.photos/id/1028/600/600" alt="Diseño 4" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="p-5 w-full">
-                            <h3 class="text-white font-bold text-xl">Personaje Original</h3>
-                            <p class="text-claro text-sm">Diseño propio • Mercy</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <!-- Foto de perfil -->
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-marco shadow-lg">
+            <img src="https://i.imgur.com/9xR8wQH.png" alt="Mercy - Joe Andre Villacres Guevara" class="w-full h-full object-cover">
         </div>
-    </section>
 
-    <!-- SECCIÓN: HABILIDADES -->
-    <section id="habilidades" class="py-20 bg-medio/20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-16 text-white">Mis Habilidades</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                
-                <div id="ilustrador" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-rosa">
-                    <i class="fa fa-paint-brush text-4xl text-rosa mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-white">Adobe Illustrator</h3>
-                    <p class="text-soft/80">Diseño vectorial, logotipos, ilustraciones y gráficos escalables de alta calidad.</p>
-                </div>
+    </div>
 
-                <div id="ia" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-principal">
-                    <i class="fa fa-cogs text-4xl text-principal mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-white">Inteligencia Artificial</h3>
-                    <p class="text-soft/80">Uso de herramientas IA para generar ideas, referencias, mejorar procesos y crear arte único.</p>
-                </div>
-
-                <div id="web" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-claro">
-                    <i class="fa fa-code text-4xl text-claro mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-white">Diseño Web Básico</h3>
-                    <p class="text-soft/80">Maquetación, diseño visual y estructuración de páginas web y portafolios como este.</p>
-                </div>
-
-                <div id="instagram" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-rosa">
-                    <i class="fa fa-instagram text-4xl text-rosa mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-white">Contenido Instagram</h3>
-                    <p class="text-soft/80">Diseño de publicaciones, historias, reels y estética visual para redes sociales.</p>
-                </div>
-
-                <div id="tiktok" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-principal">
-                    <i class="fa fa-music text-4xl text-principal mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-white">Contenido TikTok</h3>
-                    <p class="text-soft/80">Creación de videos cortos, animaciones, edición y contenido creativo para tendencias.</p>
-                </div>
-
-            </div>
+    <!-- Pie de página: Redes y Contacto -->
+    <div class="flex flex-col md:flex-row justify-between items-center w-full mt-12 gap-4">
+        
+        <!-- Iconos redes -->
+        <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 rounded-md bg-oscuro/60 flex items-center justify-center hover:bg-morado transition">
+                <i class="fa fa-github text-xl"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-md bg-oscuro/60 flex items-center justify-center hover:bg-morado transition">
+                <i class="fa fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-md bg-oscuro/60 flex items-center justify-center hover:bg-morado transition">
+                <i class="fa fa-paint-brush text-xl"></i>
+            </a>
         </div>
-    </section>
 
-    <!-- SECCIÓN: SOBRE MÍ -->
-    <section id="sobre-mi" class="py-20 bg-white/5">
-        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <div class="absolute -inset-3 bg-gradient-to-tr from-principal/40 to-rosa/40 rounded-xl blur-md"></div>
-                <img src="https://picsum.photos/id/1027/500/600" alt="Sobre Mercy" class="rounded-xl shadow-xl w-full relative border-4 border-white/70">
-            </div>
-            <div>
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black mb-3 text-white">Sobre mí</h2>
-                <h3 class="text-xl font-bold text-rosa mb-4">Joe Andre Villacres Guevara | Mercy</h3>
-                <p class="text-soft/90 mb-4 leading-relaxed text-lg">
-                    Soy diseñador gráfico e ilustrador apasionado por el estilo anime, la cultura visual y la creatividad sin límites. Me encanta transformar ideas en imágenes que transmiten emociones.
-                </p>
-                <p class="text-soft/90 mb-6 leading-relaxed">
-                    Domino herramientas digitales, diseño para redes y uso tecnología para mejorar cada proyecto. Mi objetivo es que cada trabajo tenga identidad, estilo y calidad profesional.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-behance"></i></a>
-                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-dribbble"></i></a>
-                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-instagram"></i></a>
-                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
+        <!-- Contacto -->
+        <div class="flex items-center gap-2 text-lg">
+            <i class="fa fa-envelope text-rosa"></i>
+            <span>Contacto: joeeredarl@gmail.com</span>
         </div>
-    </section>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="py-20 bg-medio/30">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4">¿Te gustaría trabajar conmigo?</h2>
-            <p class="text-center text-claro font-semibold mb-16">¡Hagamos algo increíble juntos!</p>
-            
-            <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20">
-                <form>
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-claro mb-2 font-semibold">Nombre</label>
-                            <input type="text" class="w-full px-4 py-3 bg-white/20 border border-rosa/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-rosa text-white placeholder:text-white/70">
-                        </div>
-                        <div>
-                            <label class="block text-claro mb-2 font-semibold">Correo electrónico</label>
-                            <input type="email" class="w-full px-4 py-3 bg-white/20 border border-rosa/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-rosa text-white placeholder:text-white/70">
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-claro mb-2 font-semibold">Mensaje</label>
-                        <textarea rows="5" class="w-full px-4 py-3 bg-white/20 border border-rosa/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-rosa text-white placeholder:text-white/70"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-rosa to-principal text-white py-3 rounded-lg font-bold hover:shadow-neon transition-all transform hover:-translate-y-1">
-                        Enviar Mensaje
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="bg-oscuro/90 text-white py-8 text-center border-t border-rosa/30">
-        <p class="text-lg font-semibold">© 2026 Joe Andre Villacres Guevara — <span class="text-rosa font-bold text-shadow-neon">Mercy</span></p>
-        <p class="text-sm text-claro/60 mt-1">Diseñador Gráfico & Ilustrador | Hecho con estilo anime 💜</p>
-    </footer>
-
-    <!-- Script para menú móvil -->
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const menuMovil = document.getElementById('menuMovil');
-        menuBtn.addEventListener('click', () => {
-            menuMovil.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>
