@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Andre Villacres Guevara | Mercy</title>
+    <title>Sección de Tarjetas</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        cristal: 'rgba(255, 255, 255, 0.12)',
-                        borde: 'rgba(255, 255, 255, 0.25)',
-                        texto: '#ffffff'
+                        fondo: '#121218',
+                        tarjeta1: '#5B42D3',
+                        tarjeta2: '#E52521',
+                        tarjeta3: '#009EDC',
+                        tarjeta4: '#30B877',
+                        tarjeta5: '#FBC200',
+                        texto: '#FFFFFF',
+                        gris: '#888892'
                     },
                     fontFamily: {
-                        cursiva: ['"Dancing Script"', 'cursive', 'sans-serif'],
+                        poppins: ['"Poppins"', 'sans-serif'],
                     },
                 }
             }
@@ -24,41 +29,64 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .fondo-imagen {
-                background-image: url('1.png');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
+            .sombra-tarjeta {
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             }
-            .efecto-vidrio {
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
-                border: 1px solid rgba(255, 255, 255, 0.18);
+            .fondo-cuadricula {
+                background-image: 
+                    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+                background-size: 40px 40px;
             }
         }
     </style>
 </head>
-<body class="fondo-imagen text-texto min-h-screen font-sans p-6">
+<body class="bg-gray-800 min-h-screen flex items-center justify-center p-6 font-poppins">
 
-    <!-- Tarjeta: Arriba a la izquierda, sin botones -->
-    <div class="efecto-vidrio rounded-2xl p-6 w-full max-w-md shadow-lg">
-        <div class="flex items-center gap-4 mb-3">
-            <!-- Foto de perfil: 2.png -->
-            <div class="w-12 h-12 rounded-full overflow-hidden border border-borde">
-                <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
-            </div>
-            <!-- Nombre y cargo -->
-            <div>
-                <h3 class="font-semibold text-lg">Joe Andre Villacres Guevara</h3>
-                <p class="text-sm text-white/90">Comunicador Digital · Diseñador</p>
-            </div>
+    <!-- Contenedor principal igual al diseño -->
+    <div class="w-full max-w-6xl bg-fondo/90 backdrop-blur-md rounded-3xl p-8 fondo-cuadricula">
+        
+        <!-- Encabezado -->
+        <div class="text-center mb-12">
+            <span class="text-gris text-sm bg-white/5 px-4 py-1 rounded-full inline-block mb-2">⭐ 5 Meses - Acceso Libre</span>
+            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-texto leading-tight">
+                Fun Games<br>Nintendo Switch
+            </h2>
+            <p class="text-gris text-sm mt-3 max-w-lg mx-auto">
+                Be sure to try our selection of games, we have carefully chosen them. There are games for all tastes.
+            </p>
         </div>
 
-        <!-- Texto: Cursiva fina, clara y legible -->
-        <p class="font-cursiva text-lg font-normal leading-relaxed text-white">
-            Soy comunicador digital con experiencia en Adobe Illustrador e inteligencia artificial, hago trabajos estudiantiles, hojas de vida, páginas web y publicidad. Me adapto a cualquier tipo de trabajo como vectorizar logotipos, diseños y alguna otra especialidad.
-        </p>
+        <!-- Contenedor de tarjetas -->
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 items-end">
+
+            <!-- Tarjeta 1 -->
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta1 rounded-2xl sombra-tarjeta relative overflow-hidden">
+                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.5</div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta2 rounded-2xl sombra-tarjeta relative overflow-hidden">
+                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.6</div>
+            </div>
+
+            <!-- Tarjeta 3 (central, más alta) -->
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[280px] bg-tarjeta3 rounded-2xl sombra-tarjeta relative overflow-hidden scale-105 z-10">
+                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.7</div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[260px] bg-tarjeta4 rounded-2xl sombra-tarjeta relative overflow-hidden">
+                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">4.2</div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="w-[140px] md:w-[160px] lg:w-[180px] h-[240px] bg-tarjeta5 rounded-2xl sombra-tarjeta relative overflow-hidden">
+                <div class="absolute top-3 right-3 bg-black/20 text-white text-xs px-2 py-0.5 rounded-full">3.9</div>
+            </div>
+
+        </div>
+
     </div>
 
 </body>
