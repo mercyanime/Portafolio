@@ -95,7 +95,7 @@
 <body class="fondo-imagen text-texto min-h-screen font-inter p-6 relative overflow-hidden">
 
     <!-- 🔹 TARJETA DE PERFIL PRINCIPAL - ARRIBA IZQUIERDA -->
-    <div class="efecto-vidrio rounded-2xl p-4 w-full max-w-md shadow-lg z-40 relative">
+    <div class="efecto-vidrio p-4 w-full max-w-md shadow-lg z-40 relative">
         <div class="flex items-center gap-3 mb-2">
             <div class="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-borde shadow-md">
                 <img src="2.png" alt="Joe Andre Villacres Guevara" class="w-full h-full object-cover">
@@ -111,8 +111,69 @@
     </div>
 
 
-    <!-- 🔹 PANTALLA INSTAGRAM - IZQUIERDA, DEBAJO DEL PERFIL -->
-    <div class="absolute top-[22%] left-6 perfil-neon w-[280px] h-[480px] p-3 z-50">
+    <!-- 🔹 PASATIEMPOS - DEBAJO DE TU PERFIL -->
+    <div class="absolute top-[180px] left-6 efecto-vidrio p-4 w-full max-w-md shadow-lg z-30">
+        <h3 class="text-center text-sm font-light mb-2">Pasatiempos</h3>
+        <div class="w-full h-28 rounded-lg mb-2 overflow-hidden border border-borde">
+            <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
+        </div>
+        <p class="font-profesional font-light text-[10px] leading-relaxed text-white text-center">
+            Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
+        </p>
+    </div>
+
+
+    <!-- 🔹 EXPERIENCIA - AL LADO DE TU PERFIL (ARRIBA DERECHA) -->
+    <div class="absolute top-6 right-6 efecto-vidrio p-4 w-[280px] shadow-lg z-30">
+        <h3 class="text-center text-sm font-light mb-3 texto-neon">Experiencia</h3>
+        <ul class="space-y-2 text-white/90 text-[11px]">
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-briefcase text-ig_rosa mt-0.5"></i>
+                <span><strong>8 años</strong> en atención al cliente</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-building text-ig_morado mt-0.5"></i>
+                <span><strong>2 años</strong> en COOPERATIVA TOURIS SAN FRANCISCO</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-truck text-ig_naranja mt-0.5"></i>
+                <span><strong>1 año</strong> en AGEEPCOURIER ECUADOR S.A</span>
+            </li>
+            <li class="flex items-start gap-2">
+                <i class="fa-solid fa-gamepad text-ig_amarillo mt-0.5"></i>
+                <span><strong>6 MESES</strong> EN HOUSE GAMING CYBER</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 🔹 CUADROS DE HABILIDADES - CENTRO INFERIOR -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-20">
+        <div class="cuadro-vidrio bg-cuadro1/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
+            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-brands fa-adobe text-white text-lg"></i></div>
+            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <span class="text-white text-[10px] font-light text-center">Adobe Illustrator</span>
+        </div>
+        <div class="cuadro-vidrio bg-cuadro2/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
+            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-brain text-white text-lg"></i></div>
+            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <span class="text-white text-[10px] font-light text-center">Inteligencia Artificial</span>
+        </div>
+        <div class="cuadro-vidrio bg-cuadro3/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
+            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-globe text-white text-lg"></i></div>
+            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <span class="text-white text-[10px] font-light text-center">Páginas Web</span>
+        </div>
+        <div class="cuadro-vidrio bg-cuadro4/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
+            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-graduation-cap text-white text-lg"></i></div>
+            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+            <span class="text-white text-[10px] font-light text-center">Trabajos Estudiantiles</span>
+        </div>
+    </div>
+
+
+    <!-- 🔹 PANTALLA INSTAGRAM - ESQUINA INFERIOR DERECHA -->
+    <div class="absolute bottom-6 right-6 perfil-neon w-[280px] h-[480px] p-3 z-50">
         <!-- Encabezado -->
         <div class="flex justify-between items-center mb-2">
             <i class="fa-solid fa-plus text-white text-base"></i>
@@ -175,71 +236,6 @@
             <i class="fa-solid fa-paper-plane text-base"></i>
             <i class="fa-solid fa-magnifying-glass text-base"></i>
             <i class="fa-regular fa-circle-user text-base"></i>
-        </div>
-    </div>
-
-
-    <!-- 🔹 CONTENEDOR CENTRAL: PASATIEMPOS + EXPERIENCIA -->
-    <div class="absolute top-[20%] left-1/2 -translate-x-1/2 flex gap-4 z-30">
-        
-        <!-- Tarjeta Pasatiempos -->
-        <div class="efecto-vidrio p-4 w-[260px] shadow-lg">
-            <h3 class="text-center text-sm font-light mb-2">Pasatiempos</h3>
-            <div class="w-full h-28 rounded-lg mb-2 overflow-hidden border border-borde">
-                <img src="3.png" alt="Pasatiempos" class="w-full h-full object-cover">
-            </div>
-            <p class="font-profesional font-light text-[10px] leading-relaxed text-white text-center">
-                Mejorar en velocidad de vectorización, Dibujo, ilustración, navegar en busca de conocimiento para mejorar en mi experiencia, practicar y mejorar mi velocidad, vectorizar y diseñar banners png
-            </p>
-        </div>
-
-        <!-- Tarjeta Experiencia -->
-        <div class="efecto-vidrio p-4 w-[260px] shadow-lg">
-            <h3 class="text-center text-sm font-light mb-3 texto-neon">Experiencia</h3>
-            <ul class="space-y-2 text-white/90 text-[11px]">
-                <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-briefcase text-ig_rosa mt-0.5"></i>
-                    <span><strong>8 años</strong> en atención al cliente</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-building text-ig_morado mt-0.5"></i>
-                    <span><strong>2 años</strong> en COOPERATIVA TOURIS SAN FRANCISCO</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-truck text-ig_naranja mt-0.5"></i>
-                    <span><strong>1 año</strong> en AGEEPCOURIER ECUADOR S.A</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-gamepad text-ig_amarillo mt-0.5"></i>
-                    <span><strong>6 MESES</strong> EN HOUSE GAMING CYBER</span>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-
-    <!-- 🔹 CUADROS DE HABILIDADES - ABAJO CENTRO -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-20">
-        <div class="cuadro-vidrio bg-cuadro1/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-brands fa-adobe text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Adobe Illustrator</span>
-        </div>
-        <div class="cuadro-vidrio bg-cuadro2/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-brain text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Inteligencia Artificial</span>
-        </div>
-        <div class="cuadro-vidrio bg-cuadro3/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-globe text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Páginas Web</span>
-        </div>
-        <div class="cuadro-vidrio bg-cuadro4/80 p-3 w-[160px] h-[180px] flex flex-col items-center justify-center">
-            <div class="w-10 h-10 bg-black/30 rounded-lg flex items-center justify-center mb-2"><i class="fa-solid fa-graduation-cap text-white text-lg"></i></div>
-            <div class="flex gap-1 text-yellow-400 text-sm mb-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
-            <span class="text-white text-[10px] font-light text-center">Trabajos Estudiantiles</span>
         </div>
     </div>
 
