@@ -16,7 +16,8 @@
                         vidrio_rojo: 'rgba(200, 30, 50, 0.25)',
                         vidrio_morado: 'rgba(120, 40, 150, 0.2)',
                         vidrio_azul: 'rgba(40, 80, 180, 0.22)',
-                        vidrio_vacio: 'rgba(120, 60, 140, 0.18)',
+                        vidrio_vacio_rojo: 'rgba(200, 30, 60, 0.18)',
+                        vidrio_vacio_morado: 'rgba(100, 40, 130, 0.15)',
                         borde_vidrio: 'rgba(255, 255, 255, 0.15)',
                         texto: '#ffffff',
                         exp_rosa: '#ff4d6d',
@@ -73,8 +74,15 @@
                 border-radius: 0.7rem;
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
             }
-            .efecto-vidrio-cuadro {
-                background: rgba(120, 60, 140, 0.18);
+            .efecto-vidrio-cuadro-rojo {
+                background: rgba(200, 30, 60, 0.18);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 0.8rem;
+            }
+            .efecto-vidrio-cuadro-morado {
+                background: rgba(100, 40, 130, 0.15);
                 backdrop-filter: blur(16px);
                 -webkit-backdrop-filter: blur(16px);
                 border: 1px solid rgba(255, 255, 255, 0.12);
@@ -155,15 +163,15 @@
     </div>
 
 
-    <!-- 🔹 CUADROS VACÍOS - POSICIONES EXACTAS SEGÚN TU IMAGEN -->
-    <!-- Cuadro 1: Arriba centro -->
-    <div class="efecto-vidrio-cuadro w-[260px] h-[180px] absolute top-6 left-[520px] z-20"></div>
-    <!-- Cuadro 2: Arriba derecha -->
-    <div class="efecto-vidrio-cuadro w-[220px] h-[160px] absolute top-6 right-6 z-20"></div>
-    <!-- Cuadro 3: Izquierda centro -->
-    <div class="efecto-vidrio-cuadro w-[240px] h-[200px] absolute top-[140px] left-[420px] z-20"></div>
-    <!-- Cuadro 4: Centro grande -->
-    <div class="efecto-vidrio-cuadro w-[380px] h-[120px] absolute bottom-[240px] left-[380px] z-20"></div>
+    <!-- 🔹 CUADROS VACÍOS - POSICIONES, TAMAÑOS Y COLORES EXACTOS DE TU IMAGEN -->
+    <!-- 1. Arriba centro-derecha -->
+    <div class="efecto-vidrio-cuadro-morado w-[270px] h-[180px] absolute top-6 left-[530px] z-20"></div>
+    <!-- 2. Arriba esquina derecha -->
+    <div class="efecto-vidrio-cuadro-morado w-[220px] h-[160px] absolute top-6 right-6 z-20"></div>
+    <!-- 3. Izquierda centro (rojo) -->
+    <div class="efecto-vidrio-cuadro-rojo w-[250px] h-[210px] absolute top-[140px] left-[430px] z-20"></div>
+    <!-- 4. Centro inferior (morado largo) -->
+    <div class="efecto-vidrio-cuadro-morado w-[390px] h-[120px] absolute bottom-[240px] left-[390px] z-20"></div>
 
 
     <!-- 🔹 EXPERIENCIA (ICONOS CIRCULARES - SOLO LOGOS, ESTRELLAS CORRECTAS) -->
