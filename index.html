@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Diseñador Gráfico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primario: '#165DFF',
+                        secundario: '#36CFC9',
+                        oscuro: '#1D2129',
+                        claro: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-oscuro bg-white">
+    <!-- Encabezado y Navegación -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primario text-shadow">TuNombre</a>
+            
+            <!-- Navegación Escritorio -->
+            <nav class="hidden md:flex gap-8">
+                <a href="#inicio" class="font-medium hover:text-primario transition-colors">Inicio</a>
+                <a href="#portafolio" class="font-medium hover:text-primario transition-colors">Portafolio</a>
+                <a href="#sobre-mi" class="font-medium hover:text-primario transition-colors">Sobre mí</a>
+                <a href="#servicios" class="font-medium hover:text-primario transition-colors">Servicios</a>
+                <a href="#contacto" class="font-medium hover:text-primario transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Botón menú móvil -->
+            <button id="menuBtn" class="md:hidden text-oscuro text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div id="menuMovil" class="hidden md:hidden bg-white shadow-md">
+            <nav class="flex flex-col gap-3 p-4">
+                <a href="#inicio" class="font-medium py-2 hover:text-primario transition-colors">Inicio</a>
+                <a href="#portafolio" class="font-medium py-2 hover:text-primario transition-colors">Portafolio</a>
+                <a href="#sobre-mi" class="font-medium py-2 hover:text-primario transition-colors">Sobre mí</a>
+                <a href="#servicios" class="font-medium py-2 hover:text-primario transition-colors">Servicios</a>
+                <a href="#contacto" class="font-medium py-2 hover:text-primario transition-colors">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="min-h-screen flex items-center bg-gradient-to-br from-claro to-white pt-16">
+        <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-4">
+                    Diseño Gráfico <br> con propósito y estilo
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl">
+                    Creo identidades visuales, piezas publicitarias y diseños que conectan con tu audiencia y hacen crecer tu marca.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#portafolio" class="bg-primario text-white px-8 py-3 rounded-lg font-medium hover:bg-primario/90 transition-colors shadow-lg hover:shadow-xl">
+                        Ver mi trabajo
+                    </a>
+                    <a href="#contacto" class="border-2 border-primario text-primario px-8 py-3 rounded-lg font-medium hover:bg-primario/5 transition-colors">
+                        Contactarme
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-tr from-primario/20 to-secundario/20 flex items-center justify-center overflow-hidden shadow-2xl">
+                    <img src="https://picsum.photos/id/1012/400/400" alt="Diseñador Gráfico" class="w-[90%] h-[90%] object-cover rounded-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section id="portafolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">Mi Portafolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
+                    <img src="https://picsum.photos/id/1015/600/400" alt="Proyecto 1" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Identidad Visual</h3>
+                        <p class="text-gray-600">Diseño de logotipo y sistema de marca para empresa de tecnología.</p>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
+                    <img src="https://picsum.photos/id/1019/600/400" alt="Proyecto 2" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Diseño Editorial</h3>
+                        <p class="text-gray-600">Maquetación y diseño de revista corporativa y catálogos de producto.</p>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="card-hover bg-white rounded-xl overflow-hidden shadow-md">
+                    <img src="https://picsum.photos/id/1021/600/400" alt="Proyecto 3" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Redes Sociales</h3>
+                        <p class="text-gray-600">Creación de contenido visual y plantillas para Instagram y Facebook.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi" class="py-20 bg-claro">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="https://picsum.photos/id/1027/500/600" alt="Sobre mí" class="rounded-xl shadow-xl w-full">
+            </div>
+            <div>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-6">Sobre mí</h2>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    Soy diseñador gráfico con más de 5 años de experiencia ayudando a marcas a contar su historia a través del diseño. Me apasiona crear soluciones visuales que no solo se ven bien, sino que también funcionan estratégicamente.
+                </p>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Mi enfoque combina creatividad, investigación y tendencias actuales para entregar resultados de alta calidad. Domino herramientas como Adobe Illustrator, Photoshop, InDesign y After Effects.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-2xl text-oscuro hover:text-primario transition-colors"><i class="fa fa-behance"></i></a>
+                    <a href="#" class="text-2xl text-oscuro hover:text-primario transition-colors"><i class="fa fa-dribbble"></i></a>
+                    <a href="#" class="text-2xl text-oscuro hover:text-primario transition-colors"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">Mis Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-hover p-8 bg-claro rounded-xl text-center">
+                    <i class="fa fa-paint-brush text-4xl text-primario mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Identidad de Marca</h3>
+                    <p class="text-gray-600">Logotipos, manuales de marca, paletas de colores y tipografías únicas.</p>
+                </div>
+                <div class="card-hover p-8 bg-claro rounded-xl text-center">
+                    <i class="fa fa-file-image-o text-4xl text-primario mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Diseño Publicitario</h3>
+                    <p class="text-gray-600">Carteles, volantes, banners, anuncios digitales y piezas para impresión.</p>
+                </div>
+                <div class="card-hover p-8 bg-claro rounded-xl text-center">
+                    <i class="fa fa-mobile-phone text-4xl text-primario mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Contenido Digital</h3>
+                    <p class="text-gray-600">Diseño para redes sociales, ilustraciones, edición de imagen y maquetación web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-20 bg-gradient-to-br from-claro to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-16">Contacto</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Nombre</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primario">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Correo electrónico</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primario">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Mensaje</label>
+                        <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primario"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primario text-white py-3 rounded-lg font-medium hover:bg-primario/90 transition-colors shadow-md">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-oscuro text-white py-8 text-center">
+        <p>&copy; 2026 TuNombre - Diseñador Gráfico. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para menú móvil -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const menuMovil = document.getElementById('menuMovil');
+        menuBtn.addEventListener('click', () => {
+            menuMovil.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
