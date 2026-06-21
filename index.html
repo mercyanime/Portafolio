@@ -21,6 +21,11 @@
                         estudiante: '#00B498',
                         hoja: '#FF9500',
                         vector: '#34C759',
+                        // Colores de la barra que enviaste
+                        color1: '#1C4A3C',
+                        color2: '#85C254',
+                        color3: '#E8F3C2',
+                        color4: '#F8F8F5',
                     },
                     fontFamily: {
                         cursiva: ['"Dancing Script"', 'cursive', 'sans-serif'],
@@ -128,13 +133,25 @@
     </div>
 
 
-    <!-- 🔹 CUADROS DE COLORES: TOTALMENTE PEGADOS AL BORDE INFERIOR -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-0">
-        <div class="w-24 h-48 bg-ilustra rounded-t-xl"></div>
-        <div class="w-24 h-48 bg-ai rounded-t-xl"></div>
-        <div class="w-24 h-48 bg-web rounded-t-xl"></div>
-        <div class="w-24 h-48 bg-estudiante rounded-t-xl"></div>
-        <div class="w-24 h-48 bg-hoja rounded-t-xl"></div>
+    <!-- 🔹 BARRA DE COLORES (LA QUE ENVIÁSTE) -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 efecto-vidrio rounded-2xl p-3 shadow-lg z-10">
+        <p class="text-center text-xs mb-2 font-medium">Paleta de colores usada</p>
+        <div class="flex gap-0 rounded-lg overflow-hidden">
+            <div class="w-16 h-10 bg-color1 flex flex-col items-center justify-center text-[10px] text-white">#1C4A3C</div>
+            <div class="w-16 h-10 bg-color2 flex flex-col items-center justify-center text-[10px] text-black">#85C254</div>
+            <div class="w-16 h-10 bg-color3 flex flex-col items-center justify-center text-[10px] text-black">#E8F3C2</div>
+            <div class="w-16 h-10 bg-color4 flex flex-col items-center justify-center text-[10px] text-black">#F8F8F5</div>
+        </div>
+    </div>
+
+
+    <!-- 🔹 CUADROS DE COLORES: 250px x 250px, SEPARADOS, PEGADOS A ABAJO -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-6 pb-0">
+        <div class="w-[250px] h-[250px] bg-ilustra rounded-t-2xl sombra-tarjeta"></div>
+        <div class="w-[250px] h-[250px] bg-ai rounded-t-2xl sombra-tarjeta"></div>
+        <div class="w-[250px] h-[250px] bg-web rounded-t-2xl sombra-tarjeta"></div>
+        <div class="w-[250px] h-[250px] bg-estudiante rounded-t-2xl sombra-tarjeta"></div>
+        <div class="w-[250px] h-[250px] bg-hoja rounded-t-2xl sombra-tarjeta"></div>
     </div>
 
 </body>
