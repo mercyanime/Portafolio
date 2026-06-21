@@ -14,7 +14,6 @@
                         cristal: 'rgba(255, 255, 255, 0.12)',
                         borde: 'rgba(255, 255, 255, 0.25)',
                         texto: '#ffffff',
-                        fondo: '#121218',
                         tarjeta1: '#5B42D3',
                         tarjeta2: '#E52521',
                         tarjeta3: '#009EDC',
@@ -46,15 +45,9 @@
                 border: 1px solid rgba(255, 255, 255, 0.18);
             }
 
-            /* Estilos de lo nuevo */
+            /* Estilos de las tarjetas */
             .sombra-tarjeta {
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            }
-            .fondo-cuadricula {
-                background-image: 
-                    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-                background-size: 40px 40px;
             }
         }
     </style>
@@ -82,12 +75,12 @@
     </div>
 
 
-    <!-- 🔹 LO NUEVO: Sección de tarjetas estilo Nintendo -->
-    <div class="w-full max-w-6xl mx-auto bg-fondo/90 backdrop-blur-md rounded-3xl p-8 fondo-cuadricula font-poppins">
+    <!-- 🔹 LO NUEVO: Solo las tarjetas, SIN fondo oscuro -->
+    <div class="w-full max-w-6xl mx-auto font-poppins">
         
         <!-- Encabezado -->
         <div class="text-center mb-12">
-            <span class="text-gris text-sm bg-white/5 px-4 py-1 rounded-full inline-block mb-2">⭐ 5 Meses - Acceso Libre</span>
+            <span class="text-gris text-sm bg-white/10 px-4 py-1 rounded-full inline-block mb-2">⭐ 5 Meses - Acceso Libre</span>
             <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-texto leading-tight">
                 Fun Games<br>Nintendo Switch
             </h2>
