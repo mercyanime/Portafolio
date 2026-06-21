@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Andre Villacres Guevara | Mercy - Diseño Gráfico</title>
+    <title>Joe Andre Villacres Guevara | Mercy - Portafolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,22 +14,18 @@
             theme: {
                 extend: {
                     colors: {
-                        anime: {
-                            pink: '#FF2E88',
-                            blue: '#00F0FF',
-                            purple: '#8A2BE2',
-                            yellow: '#FFE600',
-                            dark: '#12042E',
-                            light: '#F8F0FF'
-                        }
+                        principal: '#7B2CBF',
+                        rosa: '#FF2E88',
+                        oscuro: '#1A0033',
+                        medio: '#3C096C',
+                        claro: '#E0AAFF',
+                        soft: '#F8E5FF'
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
                     },
                     boxShadow: {
-                        'neon-pink': '0 0 15px #FF2E88, 0 0 30px #FF2E8880',
-                        'neon-blue': '0 0 15px #00F0FF, 0 0 30px #00F0FF80',
-                        'neon-purple': '0 0 15px #8A2BE2, 0 0 30px #8A2BE280',
+                        'neon': '0 0 12px #FF2E88, 0 0 24px #7B2CBF80',
                     }
                 }
             }
@@ -38,88 +34,119 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .text-shadow-neon {
-                text-shadow: 0 0 8px currentColor, 0 0 15px currentColor;
+                text-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
             }
-            .card-anime {
-                @apply transition-all duration-300 hover:scale-[1.03] hover:shadow-neon-blue;
+            .card-style {
+                @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-neon;
             }
-            .bg-gradient-anime {
-                background: linear-gradient(135deg, #12042E 0%, #2B0B5F 50%, #4B0082 100%);
+            .bg-gradient-principal {
+                background: linear-gradient(135deg, #1A0033 0%, #3C096C 50%, #7B2CBF 100%);
             }
             .text-gradient {
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
-                background-image: linear-gradient(90deg, #FF2E88, #00F0FF, #FFE600);
+                background-image: linear-gradient(90deg, #FF2E88, #E0AAFF);
+            }
+            .barra-superior {
+                @apply bg-oscuro/80 backdrop-blur-md border-b border-rosa/20;
+            }
+            .barra-secundaria {
+                @apply bg-medio/60 backdrop-blur-sm border-b border-claro/20;
             }
         }
     </style>
 </head>
-<body class="font-sans text-anime-dark bg-anime-light overflow-x-hidden">
-    <!-- Encabezado y Navegación -->
-    <header class="fixed w-full bg-anime-dark/90 backdrop-blur-md z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-black text-anime-pink text-shadow-neon">Mercy</a>
+<body class="font-sans text-white bg-gradient-principal min-h-screen">
+
+    <!-- 🟣 BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <header class="barra-superior fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-rosa text-shadow-neon">Mercy</a>
             
-            <!-- Navegación Escritorio -->
-            <nav class="hidden md:flex gap-8">
-                <a href="#inicio" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Inicio</a>
-                <a href="#mis-disenos" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Mis Diseños</a>
-                <a href="#sobre-mi" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Sobre mí</a>
-                <a href="#habilidades" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Habilidades</a>
-                <a href="#contacto" class="font-semibold text-anime-light hover:text-anime-blue transition-all hover:text-shadow-neon">Contacto</a>
+            <!-- Navegación Principal -->
+            <nav class="hidden md:flex gap-10">
+                <a href="#inicio" class="font-semibold text-claro hover:text-rosa transition-all">Inicio</a>
+                <a href="#mis-disenos" class="font-semibold text-claro hover:text-rosa transition-all">Mis Diseños</a>
+                <a href="#habilidades" class="font-semibold text-claro hover:text-rosa transition-all">Habilidades</a>
+                <a href="#sobre-mi" class="font-semibold text-claro hover:text-rosa transition-all">Sobre mí</a>
             </nav>
 
-            <!-- Botón menú móvil -->
-            <button id="menuBtn" class="md:hidden text-anime-blue text-2xl">
+            <button id="menuBtn" class="md:hidden text-rosa text-2xl">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
 
+        <!-- 🟣 BARRA DE NAVEGACIÓN SECUNDARIA (tal como pediste) -->
+        <div class="barra-secundaria">
+            <div class="container mx-auto px-4 py-2 flex flex-wrap gap-8 justify-center md:justify-start">
+                <a href="#ilustrador" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
+                    <i class="fa fa-paint-brush"></i> Adobe Illustrator
+                </a>
+                <a href="#ia" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
+                    <i class="fa fa-cogs"></i> IA
+                </a>
+                <a href="#web" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
+                    <i class="fa fa-code"></i> Diseño Web Básico
+                </a>
+                <a href="#instagram" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
+                    <i class="fa fa-instagram"></i> Instagram
+                </a>
+                <a href="#tiktok" class="text-sm font-medium text-soft hover:text-rosa transition-all flex items-center gap-2">
+                    <i class="fa fa-music"></i> TikTok
+                </a>
+            </div>
+        </div>
+
         <!-- Menú móvil -->
-        <div id="menuMovil" class="hidden md:hidden bg-anime-dark/95 shadow-md">
-            <nav class="flex flex-col gap-3 p-4">
-                <a href="#inicio" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Inicio</a>
-                <a href="#mis-disenos" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Mis Diseños</a>
-                <a href="#sobre-mi" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Sobre mí</a>
-                <a href="#habilidades" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Habilidades</a>
-                <a href="#contacto" class="font-semibold py-2 text-anime-light hover:text-anime-pink transition-colors">Contacto</a>
+        <div id="menuMovil" class="hidden md:hidden bg-oscuro/95">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="#inicio" class="py-2 text-claro hover:text-rosa">Inicio</a>
+                <a href="#mis-disenos" class="py-2 text-claro hover:text-rosa">Mis Diseños</a>
+                <a href="#habilidades" class="py-2 text-claro hover:text-rosa">Habilidades</a>
+                <a href="#sobre-mi" class="py-2 text-claro hover:text-rosa">Sobre mí</a>
+                <div class="border-t border-claro/20 pt-2 mt-2">
+                    <a href="#ilustrador" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-paint-brush"></i> Illustrator</a>
+                    <a href="#ia" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-cogs"></i> IA</a>
+                    <a href="#web" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-code"></i> Web</a>
+                    <a href="#instagram" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-instagram"></i> Instagram</a>
+                    <a href="#tiktok" class="py-1 text-sm text-soft hover:text-rosa flex items-center gap-2"><i class="fa fa-music"></i> TikTok</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Sección Inicio -->
-    <section id="inicio" class="min-h-screen flex items-center bg-gradient-anime pt-16 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-10">
-            <div class="absolute w-40 h-40 rounded-full bg-anime-pink blur-3xl top-1/4 left-1/4"></div>
-            <div class="absolute w-60 h-60 rounded-full bg-anime-blue blur-3xl bottom-1/3 right-1/3"></div>
-            <div class="absolute w-32 h-32 rounded-full bg-anime-yellow blur-2xl top-1/2 right-1/4"></div>
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="min-h-screen flex items-center pt-28 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-20">
+            <div class="absolute w-60 h-60 rounded-full bg-rosa blur-3xl top-1/3 left-1/4"></div>
+            <div class="absolute w-80 h-80 rounded-full bg-principal blur-3xl bottom-1/4 right-1/4"></div>
         </div>
         
-        <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="order-2 md:order-1">
-                <p class="text-anime-blue font-semibold text-lg mb-2">¡Hola! Soy</p>
-                <h1 class="text-[clamp(2.2rem,5vw,4rem)] font-black leading-none mb-3">
-                    <span class="text-anime-light">Joe Andre</span><br>
+                <p class="text-claro font-semibold text-lg mb-2">¡Hola! Soy</p>
+                <h1 class="text-[clamp(2rem,5vw,3.8rem)] font-black leading-tight mb-3">
+                    <span class="text-white">Joe Andre</span><br>
                     <span class="text-gradient">Villacres Guevara</span>
                 </h1>
-                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-anime-purple text-shadow-neon mb-4">Conocido como Mercy</h2>
-                <p class="text-lg text-anime-light/90 mb-8 max-w-xl font-light">
-                    Diseñador gráfico con alma creativa, estilo anime y pasión por lo visual. Creo mundos, personajes y diseños que despiertan emociones y destacan con personalidad única.
+                <h2 class="text-[clamp(1.3rem,3vw,2.2rem)] font-bold text-rosa text-shadow-neon mb-4">Conocido como Mercy</h2>
+                <p class="text-lg text-soft/90 mb-8 max-w-xl">
+                    Diseñador gráfico & ilustrador con estilo anime, creatividad y pasión por lo visual. Creo diseños únicos, arte digital y contenido que destaca.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#mis-disenos" class="bg-anime-pink text-white px-8 py-3 rounded-lg font-bold hover:shadow-neon-pink transition-all transform hover:-translate-y-1">
+                    <a href="#mis-disenos" class="bg-rosa text-white px-8 py-3 rounded-lg font-bold hover:shadow-neon transition-all transform hover:-translate-y-1">
                         Ver Mis Diseños
                     </a>
-                    <a href="#contacto" class="border-2 border-anime-blue text-anime-blue px-8 py-3 rounded-lg font-bold hover:bg-anime-blue/10 hover:shadow-neon-blue transition-all">
-                        Trabajemos Juntos
+                    <a href="#contacto" class="border-2 border-claro text-claro px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all">
+                        Contactarme
                     </a>
                 </div>
             </div>
             <div class="order-1 md:order-2 flex justify-center">
                 <div class="relative">
-                    <div class="absolute -inset-2 bg-gradient-to-r from-anime-pink via-anime-blue to-anime-purple rounded-full blur-lg opacity-70 animate-pulse"></div>
-                    <div class="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden border-4 border-white relative">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-rosa via-principal to-medio rounded-full blur-lg opacity-70 animate-pulse"></div>
+                    <div class="w-[260px] h-[260px] md:w-[340px] md:h-[340px] rounded-full overflow-hidden border-4 border-white/80 relative">
                         <img src="https://picsum.photos/id/22/400/400" alt="Joe Andre Villacres Guevara - Mercy" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -127,55 +154,51 @@
         </div>
     </section>
 
-    <!-- 🆕 SECCIÓN: MIS DISEÑOS (Para subir tus imágenes) -->
-    <section id="mis-disenos" class="py-20 bg-white">
+    <!-- SECCIÓN: MIS DISEÑOS -->
+    <section id="mis-disenos" class="py-20 bg-white/5 backdrop-blur-sm">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4 text-anime-dark">Mis Diseños</h2>
-            <p class="text-center text-anime-purple font-semibold mb-16">Aquí encontrarás toda mi colección artística y creaciones</p>
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4 text-white">Mis Diseños</h2>
+            <p class="text-center text-claro font-semibold mb-16">Ilustraciones, arte digital y creaciones originales</p>
             
-            <!-- 📌 INSTRUCCIÓN: Aquí puedes agregar tus imágenes copiando y pegando el bloque de abajo -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 
-                <!-- 🖼️ BLOQUE DE IMAGEN (Copia este bloque para agregar más diseños) -->
-                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-pink/20">
-                    <!-- Reemplaza el enlace de abajo por la URL de tu imagen -->
-                    <img src="https://picsum.photos/id/1015/600/600" alt="Título de tu diseño" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <!-- Bloque de diseño (copia este para agregar más) -->
+                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-rosa/30">
+                    <img src="https://picsum.photos/id/1015/600/600" alt="Diseño 1" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-5 w-full">
                             <h3 class="text-white font-bold text-xl">Ilustración Anime</h3>
-                            <p class="text-anime-blue text-sm">Diseño original • Mercy</p>
+                            <p class="text-claro text-sm">Creación propia • Mercy</p>
                         </div>
                     </div>
                 </div>
-                <!-- FIN DEL BLOQUE -->
 
-                <!-- Repite el bloque cuantas veces quieras -->
-                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-blue/20">
-                    <img src="https://picsum.photos/id/1019/600/600" alt="Diseño de Logotipo" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-principal/30">
+                    <img src="https://picsum.photos/id/1019/600/600" alt="Diseño 2" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-5 w-full">
-                            <h3 class="text-white font-bold text-xl">Identidad Visual</h3>
-                            <p class="text-anime-blue text-sm">Diseño de Marca • Mercy</p>
+                            <h3 class="text-white font-bold text-xl">Diseño de Marca</h3>
+                            <p class="text-claro text-sm">Identidad Visual • Mercy</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-purple/20">
-                    <img src="https://picsum.photos/id/1021/600/600" alt="Arte Digital" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-rosa/30">
+                    <img src="https://picsum.photos/id/1021/600/600" alt="Diseño 3" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-5 w-full">
                             <h3 class="text-white font-bold text-xl">Arte Digital</h3>
-                            <p class="text-anime-blue text-sm">Ilustración • Mercy</p>
+                            <p class="text-claro text-sm">Ilustración • Mercy</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-anime group relative overflow-hidden rounded-xl shadow-lg border-2 border-anime-pink/20">
-                    <img src="https://picsum.photos/id/1028/600/600" alt="Personaje Original" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-anime-dark/90 via-anime-purple/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="card-style group relative overflow-hidden rounded-2xl shadow-lg border-2 border-principal/30">
+                    <img src="https://picsum.photos/id/1028/600/600" alt="Diseño 4" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-oscuro/90 via-principal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                         <div class="p-5 w-full">
-                            <h3 class="text-white font-bold text-xl">Diseño de Personaje</h3>
-                            <p class="text-anime-blue text-sm">Creación propia • Mercy</p>
+                            <h3 class="text-white font-bold text-xl">Personaje Original</h3>
+                            <p class="text-claro text-sm">Diseño propio • Mercy</p>
                         </div>
                     </div>
                 </div>
@@ -184,101 +207,95 @@
         </div>
     </section>
 
-    <!-- Sección Sobre mí -->
-    <section id="sobre-mi" class="py-20 bg-anime-light/50">
-        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <div class="absolute -inset-3 bg-gradient-to-tr from-anime-purple/30 to-anime-pink/30 rounded-xl blur-md"></div>
-                <img src="https://picsum.photos/id/1027/500/600" alt="Sobre Mercy" class="rounded-xl shadow-xl w-full relative border-4 border-white">
-            </div>
-            <div>
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black mb-3 text-anime-dark">Sobre mí</h2>
-                <h3 class="text-xl font-bold text-anime-pink mb-4">Joe Andre Villacres Guevara | Mercy</h3>
-                <p class="text-anime-dark/80 mb-4 leading-relaxed text-lg">
-                    Soy diseñador gráfico e ilustrador con una gran pasión por la cultura pop, el anime y el arte visual. Para mí, diseñar es crear universos y dar vida a las ideas.
-                </p>
-                <p class="text-anime-dark/80 mb-6 leading-relaxed">
-                    Me especializo en estilos vibrantes, líneas definidas y composiciones que cuentan historias. Mi objetivo es que cada proyecto tenga alma y estilo propio.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-behance"></i></a>
-                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-dribbble"></i></a>
-                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-instagram"></i></a>
-                    <a href="#" class="text-2xl text-anime-purple hover:text-anime-pink transition-all hover:scale-125"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🆕 SECCIÓN: HABILIDADES (Antes Servicios) -->
-    <section id="habilidades" class="py-20 bg-white">
+    <!-- SECCIÓN: HABILIDADES -->
+    <section id="habilidades" class="py-20 bg-medio/20">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-16 text-anime-dark">Mis Habilidades</h2>
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-16 text-white">Mis Habilidades</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 
-                <div class="card-anime p-8 bg-gradient-to-b from-anime-pink/5 to-anime-pink/20 rounded-xl text-center border-b-4 border-anime-pink">
-                    <i class="fa fa-paint-brush text-4xl text-anime-pink mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Ilustración Digital</h3>
-                    <p class="text-anime-dark/70">Dibujo, diseño de personajes y arte conceptual con estilo anime y manga.</p>
+                <div id="ilustrador" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-rosa">
+                    <i class="fa fa-paint-brush text-4xl text-rosa mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-white">Adobe Illustrator</h3>
+                    <p class="text-soft/80">Diseño vectorial, logotipos, ilustraciones y gráficos escalables de alta calidad.</p>
                 </div>
 
-                <div class="card-anime p-8 bg-gradient-to-b from-anime-blue/5 to-anime-blue/20 rounded-xl text-center border-b-4 border-anime-blue">
-                    <i class="fa fa-laptop text-4xl text-anime-blue mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Diseño Gráfico</h3>
-                    <p class="text-anime-dark/70">Creación de logotipos, identidad de marca, carteles y material publicitario.</p>
+                <div id="ia" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-principal">
+                    <i class="fa fa-cogs text-4xl text-principal mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-white">Inteligencia Artificial</h3>
+                    <p class="text-soft/80">Uso de herramientas IA para generar ideas, referencias, mejorar procesos y crear arte único.</p>
                 </div>
 
-                <div class="card-anime p-8 bg-gradient-to-b from-anime-purple/5 to-anime-purple/20 rounded-xl text-center border-b-4 border-anime-purple">
-                    <i class="fa fa-pencil-square-o text-4xl text-anime-purple mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Dibujo Tradicional</h3>
-                    <p class="text-anime-dark/70">Bocetos, dibujo a lápiz, composición y anatomía artística.</p>
+                <div id="web" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-claro">
+                    <i class="fa fa-code text-4xl text-claro mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-white">Diseño Web Básico</h3>
+                    <p class="text-soft/80">Maquetación, diseño visual y estructuración de páginas web y portafolios como este.</p>
                 </div>
 
-                <div class="card-anime p-8 bg-gradient-to-b from-anime-yellow/5 to-anime-yellow/20 rounded-xl text-center border-b-4 border-anime-yellow">
-                    <i class="fa fa-file-photo-o text-4xl text-anime-yellow mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Edición de Imagen</h3>
-                    <p class="text-anime-dark/70">Retoque, composición y manipulación digital con Photoshop.</p>
+                <div id="instagram" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-rosa">
+                    <i class="fa fa-instagram text-4xl text-rosa mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-white">Contenido Instagram</h3>
+                    <p class="text-soft/80">Diseño de publicaciones, historias, reels y estética visual para redes sociales.</p>
                 </div>
 
-                <div class="card-anime p-8 bg-gradient-to-b from-anime-pink/5 to-anime-pink/20 rounded-xl text-center border-b-4 border-anime-pink">
-                    <i class="fa fa-code text-4xl text-anime-pink mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Diseño Web Básico</h3>
-                    <p class="text-anime-dark/70">Maquetación y diseño visual para páginas y portafolios.</p>
-                </div>
-
-                <div class="card-anime p-8 bg-gradient-to-b from-anime-blue/5 to-anime-blue/20 rounded-xl text-center border-b-4 border-anime-blue">
-                    <i class="fa fa-video-camera text-4xl text-anime-blue mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2 text-anime-dark">Animación 2D</h3>
-                    <p class="text-anime-dark/70">Pequeñas animaciones, motion graphics y efectos visuales.</p>
+                <div id="tiktok" class="card-style p-8 bg-white/5 rounded-xl text-center border-b-4 border-principal">
+                    <i class="fa fa-music text-4xl text-principal mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2 text-white">Contenido TikTok</h3>
+                    <p class="text-soft/80">Creación de videos cortos, animaciones, edición y contenido creativo para tendencias.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Sección Contacto -->
-    <section id="contacto" class="py-20 bg-gradient-anime text-white">
+    <!-- SECCIÓN: SOBRE MÍ -->
+    <section id="sobre-mi" class="py-20 bg-white/5">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="absolute -inset-3 bg-gradient-to-tr from-principal/40 to-rosa/40 rounded-xl blur-md"></div>
+                <img src="https://picsum.photos/id/1027/500/600" alt="Sobre Mercy" class="rounded-xl shadow-xl w-full relative border-4 border-white/70">
+            </div>
+            <div>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black mb-3 text-white">Sobre mí</h2>
+                <h3 class="text-xl font-bold text-rosa mb-4">Joe Andre Villacres Guevara | Mercy</h3>
+                <p class="text-soft/90 mb-4 leading-relaxed text-lg">
+                    Soy diseñador gráfico e ilustrador apasionado por el estilo anime, la cultura visual y la creatividad sin límites. Me encanta transformar ideas en imágenes que transmiten emociones.
+                </p>
+                <p class="text-soft/90 mb-6 leading-relaxed">
+                    Domino herramientas digitales, diseño para redes y uso tecnología para mejorar cada proyecto. Mi objetivo es que cada trabajo tenga identidad, estilo y calidad profesional.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-behance"></i></a>
+                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-dribbble"></i></a>
+                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="text-2xl text-claro hover:text-rosa transition-all hover:scale-125"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="py-20 bg-medio/30">
         <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4">¿Tienes una idea?</h2>
-            <p class="text-center text-anime-blue font-semibold mb-16">¡Hagámosla realidad con estilo!</p>
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-black text-center mb-4">¿Te gustaría trabajar conmigo?</h2>
+            <p class="text-center text-claro font-semibold mb-16">¡Hagamos algo increíble juntos!</p>
             
             <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20">
                 <form>
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
-                            <label class="block text-anime-yellow mb-2 font-semibold">Nombre</label>
-                            <input type="text" class="w-full px-4 py-3 bg-white/20 border border-anime-blue/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-anime-yellow text-white placeholder:text-white/70">
+                            <label class="block text-claro mb-2 font-semibold">Nombre</label>
+                            <input type="text" class="w-full px-4 py-3 bg-white/20 border border-rosa/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-rosa text-white placeholder:text-white/70">
                         </div>
                         <div>
-                            <label class="block text-anime-yellow mb-2 font-semibold">Correo electrónico</label>
-                            <input type="email" class="w-full px-4 py-3 bg-white/20 border border-anime-blue/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-anime-yellow text-white placeholder:text-white/70">
+                            <label class="block text-claro mb-2 font-semibold">Correo electrónico</label>
+                            <input type="email" class="w-full px-4 py-3 bg-white/20 border border-rosa/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-rosa text-white placeholder:text-white/70">
                         </div>
                     </div>
                     <div class="mb-6">
-                        <label class="block text-anime-yellow mb-2 font-semibold">Mensaje</label>
-                        <textarea rows="5" class="w-full px-4 py-3 bg-white/20 border border-anime-blue/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-anime-yellow text-white placeholder:text-white/70"></textarea>
+                        <label class="block text-claro mb-2 font-semibold">Mensaje</label>
+                        <textarea rows="5" class="w-full px-4 py-3 bg-white/20 border border-rosa/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-rosa text-white placeholder:text-white/70"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-anime-pink to-anime-purple text-white py-3 rounded-lg font-bold hover:shadow-neon-pink transition-all transform hover:-translate-y-1">
+                    <button type="submit" class="w-full bg-gradient-to-r from-rosa to-principal text-white py-3 rounded-lg font-bold hover:shadow-neon transition-all transform hover:-translate-y-1">
                         Enviar Mensaje
                     </button>
                 </form>
@@ -286,10 +303,10 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer class="bg-anime-dark text-anime-light py-8 text-center border-t-2 border-anime-pink/30">
-        <p class="text-lg font-semibold">© 2026 Joe Andre Villacres Guevara — <span class="text-anime-pink font-bold text-shadow-neon">Mercy</span></p>
-        <p class="text-sm text-anime-light/60 mt-1">Diseñador Gráfico & Ilustrador | Hecho con ❤️ y estilo anime</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-oscuro/90 text-white py-8 text-center border-t border-rosa/30">
+        <p class="text-lg font-semibold">© 2026 Joe Andre Villacres Guevara — <span class="text-rosa font-bold text-shadow-neon">Mercy</span></p>
+        <p class="text-sm text-claro/60 mt-1">Diseñador Gráfico & Ilustrador | Hecho con estilo anime 💜</p>
     </footer>
 
     <!-- Script para menú móvil -->
